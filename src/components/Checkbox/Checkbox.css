@@ -1,0 +1,35 @@
+.checkbox__container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__label {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 5px;
+  border: 1px solid #928f94;
+
+  cursor: pointer;
+}
+
+.checkbox__tittle {
+  font-weight: 400;
+  font-size: inherit;
+  color: inherit;
+
+  margin-left: 20px;
+}
+
+.checkbox_on .checkbox__label {
+  border: 1px solid #ffa800;
+
+  background-image: url(../../assets/images/icon_checkbox_ok.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.checkbox_on .checkbox__tittle {
+  color: #ffa800;
+}

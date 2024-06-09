@@ -1,0 +1,15 @@
+.total-amount__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.total-amount__text {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}

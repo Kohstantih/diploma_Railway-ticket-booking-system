@@ -1,0 +1,35 @@
+.manual__living {
+  position: relative;
+
+  width: 100%;
+  height: 575px;
+
+  background-color: rgb(255, 214, 0);
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.manual__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.manual__living-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+
+  background-image: url('../../assets/images/manual.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.7;
+}

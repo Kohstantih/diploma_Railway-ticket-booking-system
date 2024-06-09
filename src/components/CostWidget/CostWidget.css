@@ -1,0 +1,7 @@
+.cost-widget {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  font-weight: 700;
+}

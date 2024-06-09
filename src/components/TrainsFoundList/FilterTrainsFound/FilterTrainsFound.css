@@ -1,0 +1,46 @@
+.filters__container {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.filters__list {
+  width: 139px;
+  text-align: left;
+
+  background-color: #f7f5f9;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.filters__active {
+  width: 139px;
+  font-weight: bold;
+
+  padding-left: 5px;
+}
+
+.filters__item {
+  height: 40px;
+
+  padding: 9px 0 9px 5px;
+
+  cursor: pointer;
+}
+
+.filters__item:hover {
+  background: #ffca62;
+  color: #ffffff;
+}
+
+.filters__item:nth-last-child(n + 1) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters__item_active {
+  font-weight: bold;
+}

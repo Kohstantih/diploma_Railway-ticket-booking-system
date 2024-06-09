@@ -1,0 +1,16 @@
+.navigation__list {
+  width: 100%;
+  max-width: 830px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 35px;
+  text-align: left;
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 1);
+}

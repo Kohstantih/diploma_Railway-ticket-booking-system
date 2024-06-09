@@ -1,0 +1,30 @@
+.count-tickets__box {
+  width: 240px;
+  height: 50px;
+
+  border-radius: 5px;
+  border: 1px 0px 0px 0px;
+  border: 1px solid #928f94;
+
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: baseline;
+
+  padding: 13px 17px 13px 17px;
+}
+
+.count-tickets__text {
+  min-width: fit-content;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+.count-tickets__input {
+  width: 100%;
+
+  margin-left: 5px;
+}

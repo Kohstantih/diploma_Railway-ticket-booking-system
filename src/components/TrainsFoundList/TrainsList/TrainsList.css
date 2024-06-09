@@ -1,0 +1,82 @@
+.train-found__item{
+  width: 959px;
+
+  color: #3e3c41;
+
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #0000004d;
+}
+
+.train-found__item:nth-last-child(n + 2) {
+  margin-bottom: 47px;
+}
+
+.train-found {
+  display: flex;
+}
+
+.train-found__aside {
+  min-width: 196px;
+
+  background-color: #e4e0e9;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.train-found__image-box {
+  margin-top: 58px;
+}
+
+.train-found__number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+
+  margin-top: 17px;
+}
+
+.train-directions {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+
+  margin-top: 15px;
+}
+
+.train-directions__start {
+  color: #928f94;
+}
+
+.train-found__body {
+  width: 100%;
+
+  display: flex;
+}
+
+.train-found__directions-container {
+  width: 100%;
+  padding-top: 52px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.direction-description__wrapper {
+  margin-bottom: 63px;
+}
+
+.train-found__boundary {
+  height: 100%;
+  width: 1px;
+
+  background-color: #e5e5e5;
+}
+
+.choosing-seat__menu-container {
+  min-width: 282px;
+}

@@ -1,0 +1,8 @@
+.fullname-inputs__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fullname-input__wrapper {
+  width: 280px;
+}

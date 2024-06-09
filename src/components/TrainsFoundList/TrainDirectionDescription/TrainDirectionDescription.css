@@ -1,0 +1,55 @@
+.direction-description {
+  width: 404px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.direction__point {
+  text-align: left;
+  color: #000000;
+}
+
+.direction__time {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.direction__city {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.direction__station {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #928f94;
+}
+
+.travel__time {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+
+  color: #c4c4c4;
+}
+
+.travel__arrow {
+  width: 30px;
+  height: 20px;
+
+  background-image: url(../../../assets/images/icon_arrow_orange.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-top: 5px;
+}
+
+.travel_back {
+  transform: rotate(180deg);
+}

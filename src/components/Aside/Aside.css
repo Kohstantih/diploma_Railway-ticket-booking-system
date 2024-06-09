@@ -1,0 +1,24 @@
+.trip-details__container {
+    width: 360px;
+
+    background-color: #3E3C41;
+}
+
+.trip-details__item {
+    padding: 21px 28px 40px 28px;
+}
+
+.trip-details__item:nth-child(n + 2) {
+    border-top: 1px solid #E5E5E5;
+}
+.trip-details__tittle {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #E5E5E5;
+
+    padding-top: 12px;
+}

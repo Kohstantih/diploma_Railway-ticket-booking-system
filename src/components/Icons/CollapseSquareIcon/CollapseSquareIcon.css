@@ -1,0 +1,11 @@
+.collapse-square__container {
+  cursor: pointer;
+}
+
+.collapse-square__container:hover .collapse-square__fill {
+  fill: #fcdc9d;
+}
+
+.collapse-square__container:hover .collapse-square__stroke {
+  stroke: #fcdc9d;
+}

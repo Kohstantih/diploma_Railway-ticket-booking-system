@@ -1,0 +1,18 @@
+.aside-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside-section__title {
+  flex-grow: 1;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+
+  color: #ffffff;
+
+  margin-left: 12px;
+}

@@ -1,0 +1,105 @@
+.carriage-checked__container {
+  display: flex;
+}
+
+.number__box {
+  width: 190px;
+  height: 161px;
+
+  background-color: #ffd98f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number__tittle {
+  height: 67px;
+
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 84px;
+  text-align: left;
+
+  color: #292929;
+}
+
+.number__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.carriage-checked__wrapper {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin: 33px 59px 0 85px;
+}
+
+.carriage-checked__box-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+  color: #928f94;
+
+  margin-bottom: 20px;
+}
+
+.carriage-checked__box-title_black {
+  color: #000000;
+}
+
+.carriage-checked__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+
+  display: flex;
+  align-items: baseline;
+}
+
+.carriage-checked__text:nth-child(n + 2) {
+  margin-top: 20px;
+}
+
+.carriage-checked__seats-value {
+  font-weight: 700;
+
+  margin-left: 10px;
+}
+
+.carriage-checked__cost-value {
+  font-weight: 700;
+}
+
+.carriage-checked__cost-valuta {
+  width: 14px;
+  height: 17px;
+
+  background-image: url(../../../../assets/images/icon_valuta_rubl.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-left: 10px;
+}
+
+.carriage-checked__facilities {
+  width: 183px;
+}
+
+.applicant-info {
+  width: 199px;
+
+  background-color: #f3f3f3;
+
+  padding: 15px;
+  margin: 0 42px 0 auto;
+}

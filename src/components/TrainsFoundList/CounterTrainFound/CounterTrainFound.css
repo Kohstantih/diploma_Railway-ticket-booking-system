@@ -1,0 +1,15 @@
+.train-count__list {
+  display: flex;
+}
+
+.train-count__item {
+  text-align: right;
+
+  cursor: pointer;
+
+  margin-left: 7px;
+}
+
+.train-count__item_active {
+  font-weight: bold;
+}

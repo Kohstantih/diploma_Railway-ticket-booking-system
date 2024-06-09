@@ -1,0 +1,41 @@
+.calendar__table {
+  width: 100%;
+
+  border-spacing: 10px 4px;
+
+  padding: 19px 30px 19px 30px;
+}
+
+.date-picker {
+  font-size: 30px;
+  text-align: right;
+}
+
+.date-picker:nth-last-child(1) {
+  font-weight: bold;
+}
+
+.date-picker_this-month {
+  color: #000000;
+}
+
+.this-month_last {
+  opacity: 0.5;
+}
+
+.this-moth_future {
+  cursor: pointer;
+}
+
+.date-picker_other-month {
+  color: #dad9d9;
+}
+
+.date-picker_week-end {
+  font-weight: bold;
+}
+
+.date-picker_active {
+  background-color: #ffa8004f;
+  outline: 2px solid #ffa800;
+}

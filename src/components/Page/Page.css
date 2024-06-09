@@ -1,0 +1,14 @@
+.page__container {
+  margin: 95px 0 140px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.page__aside {
+  width: 360px;
+}
+
+.page__main {
+  width: 960px;
+}

@@ -1,0 +1,13 @@
+.carriage-checker__header {
+  margin: 0 19px 0 19px;
+  padding-bottom: 26px;
+}
+
+.carriage-checker__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+
+  margin-bottom: 38px;
+}

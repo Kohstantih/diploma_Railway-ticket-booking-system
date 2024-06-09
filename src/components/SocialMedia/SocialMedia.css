@@ -1,0 +1,21 @@
+.social-media__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: left;
+
+  color: rgba(255, 255, 255, 1);
+
+  margin-bottom: 28px;
+}
+
+.social-media__list {
+  width: 360px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media__link:active {
+  fill: #ffca62;
+}

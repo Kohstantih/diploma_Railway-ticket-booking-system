@@ -1,0 +1,200 @@
+.train-details__container {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #00000040;
+
+  padding-top: 36px;
+}
+
+.train-details__wrapper {
+  margin: 0 19px 0 19px;
+}
+
+.train-details__direction {
+  display: flex;
+}
+
+.train_back .train-details__direction {
+  justify-content: flex-end;
+}
+
+.train-details__direction-icon {
+  width: 76px;
+  height: 60px;
+  border-radius: 5px;
+
+  background-image: url(../../../assets/images/arrow_direction.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-right: 10px;
+}
+
+.train_go .train-details__direction-icon {
+  transform: rotate(180deg);
+}
+
+.train-details__btn-back {
+  width: 325px;
+  height: 60px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+
+  color: #292929;
+
+  border-radius: 5px;
+  border: 1px solid #292929;
+
+  background-color: transparent;
+}
+
+.train-details__btn-back:hover {
+  border: 1px solid #292929;
+  color: #ffa800;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.train-details__btn-back:active {
+  color: #292929;
+  border: none;
+  background-color: #ffa800;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.train-descriptions {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #f7f6f6;
+
+  margin-top: 32px;
+}
+
+.train-name__box {
+  width: 240px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 17px 0 17px 17px;
+}
+
+.train-name__icon-wrapper {
+  padding-left: 18px;
+}
+
+.train-name__tittle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+
+  color: #3e3c41;
+
+  margin-left: 27px;
+}
+
+.train-name__number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+
+  margin-bottom: 5px;
+}
+
+.train-name__point-previous {
+  color: #928f94;
+}
+
+.train-direction__container {
+  width: 480px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+
+  padding: 17px 35px 17px 35px;
+}
+
+.station-descriptions {
+  font-weight: 400;
+  text-align: left;
+}
+
+.station-descriptions__time {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.station-descriptions__city {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.station-descriptions__name {
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #928f94;
+}
+
+.train-direction__arrow {
+  width: 30px;
+  height: 20px;
+
+  background-image: url(../../assets/images/icon_arrow_orange.svg);
+}
+
+.train_back .train-direction__arrow {
+  transform: rotate(180deg);
+}
+
+.travel-time__box {
+  width: 236px;
+
+  display: flex;
+  align-items: center;
+}
+
+.travel-time__icon {
+  margin-left: 34px;
+}
+
+.travel-time__value {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+  color: #000000;
+
+  margin-left: 10px;
+}
+
+.counter-tickets__wrapper {
+  margin-top: 40px;
+}
+
+.counter-tickets__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: left;
+
+  color: #292929;
+
+  margin-bottom: 25px;
+}
+
+.carriage__wrapper {
+  border-top: 1px solid #c4c4c4;
+
+  padding-top: 26px;
+  margin-top: 49px;
+}

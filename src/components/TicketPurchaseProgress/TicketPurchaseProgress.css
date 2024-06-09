@@ -1,0 +1,107 @@
+.purchase-progress {
+  width: 100%;
+  height: 98px;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.progress__item {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.progress__item:not(:first-child):not(:last-child) {
+  flex-shrink: 0;
+  width: 361px;
+}
+
+.progress__item_active {
+  background-color: #ffa800;
+}
+
+.progress__item_disabled {
+  background: #3e3c41;
+}
+
+.progress__item::before,
+.progress__item::after {
+  width: 98px;
+  height: 62px;
+
+  border-left: 1px solid #e5e5e5;
+
+  content: '';
+  position: absolute;
+  left: -29px;
+}
+
+.progress__item:not(:first-child):before {
+  transform: rotate(-37deg);
+  top: -36px;
+}
+
+.progress__item_disabled.progress__item:not(:first-child):before {
+  background: #3e3c41;
+}
+
+.progress__item_active.progress__item:not(:first-child):before {
+  background: #ffa800;
+}
+
+.progress__item:not(:first-child):after {
+  transform: rotate(37deg);
+  bottom: -36px;
+}
+
+.progress__item_disabled.progress__item:not(:first-child):after {
+  background: #3e3c41;
+}
+
+.progress__item_active.progress__item:not(:first-child):after {
+  background: #ffa800;
+}
+
+.stage {
+  display: flex;
+
+  font-weight: 700;
+  line-height: 35px;
+
+  color: #ffffff;
+}
+
+.progress__item:first-child .stage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress__item:not(:first-child) .stage {
+  margin-left: 35px;
+}
+
+.stage__number {
+  width: 56px;
+  height: 56px;
+
+  font-size: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+
+.stage__name {
+  font-size: 30px;
+
+  align-self: center;
+
+  margin-left: 28px;
+}

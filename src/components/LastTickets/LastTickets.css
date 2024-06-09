@@ -1,0 +1,85 @@
+.last-ticket__tittle {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: left;
+
+  margin-bottom: 26px;
+}
+
+.last-ticket__item {
+  width: 360px;
+  height: 161px;
+
+  border: 1px solid #c4c4c4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 18px;
+  margin-top: 17px;
+}
+
+.last-ticket__cities-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-details_left {
+  text-align: left;
+}
+
+.city-details_right {
+  text-align: right;
+}
+
+.city-details__tittle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+
+  color: #292929;
+}
+
+.city-details__station {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #928f94;
+}
+
+.last-ticket__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-ticket__facilities {
+  width: 92px;
+  height: 20px;
+
+  background-image: url(../../assets/images/icon_last-ticket_facilities.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.last-ticket__cost-box {
+  width: 140px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cost__text {
+  font-size: 16px;
+  font-weight: 400;
+
+  color: #928f94;
+}

@@ -1,0 +1,49 @@
+.passenger-card {
+  display: flex;
+}
+
+.passenger-card__icon-box {
+  width: 94px;
+}
+
+.passenger-card__icon {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.passenger-card__status {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+
+  color: #292929;
+
+  margin-top: 20px;
+}
+
+.passenger-card__content {
+  margin-left: 30px;
+}
+
+.passenger-card__name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+.passenger-card__data-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+  color: #928f94;
+
+  margin-top: 10px;
+}

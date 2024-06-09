@@ -1,0 +1,64 @@
+.passenger-data__item {
+  margin-bottom: 45px;
+}
+
+.passenger-data__item_open {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #00000040;
+}
+
+.passenger-data__header {
+  display: flex;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #00000040;
+
+  padding: 26px;
+}
+
+.passenger-data_open {
+  border: none;
+  border-bottom: 1px solid #928f94;
+  background-color: #f9f9f9;
+  box-shadow: none;
+}
+
+.passenger-data__text {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+
+  color: #292929;
+
+  margin-left: 16px;
+}
+
+.passenger-data__icon-wrapper {
+  margin-left: auto;
+}
+
+.passenger-data__header_last {
+  justify-content: space-between;
+}
+
+.passenger-add__text {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+
+  color: #292929;
+}
+
+.passenger-add__icon {
+  cursor: pointer;
+}
+
+.passenger-data__btn-wrapper {
+    width: 222px;
+
+    margin: 100px 0 0 auto;
+}

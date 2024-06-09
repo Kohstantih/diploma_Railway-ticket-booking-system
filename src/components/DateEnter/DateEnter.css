@@ -1,0 +1,68 @@
+.date-enter__box {
+  position: relative;
+
+  width: 325px;
+  height: 60px;
+
+  display: flex;
+
+  border-radius: 3px;
+
+  background-color: #ffffff;
+}
+
+.date-enter_aside.date-enter__box {
+  width: 295px;
+  height: 43px;
+}
+
+.date-enter__input {
+  flex-grow: 1;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+
+  border-radius: 3px;
+
+  padding: 20px;
+}
+
+.date-enter_aside .date-enter__input {
+  padding: 12px;
+}
+
+.date-enter__calendar_icon {
+  align-self: center;
+
+  margin-right: 17px;
+
+  cursor: pointer;
+}
+
+.icon_date {
+  width: 30px;
+  height: 34px;
+
+  background-image: url(../../assets/images/icon_date.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.date-enter_aside .icon_date {
+  width: 20px;
+  height: 22px;
+}
+
+.date-enter__calendar-wrapper {
+  position: absolute;
+  top: 72px;
+  left: -14px;
+  z-index: 99;
+}
+
+.date-enter_aside .date-enter__calendar-wrapper {
+  top: 55px;
+  left: -29px;
+}

@@ -1,0 +1,28 @@
+.collapse-round__box {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.collapse-round_active {
+  border: 2px solid #928f94;
+}
+
+.collapse-round_inactive {
+  border: 2px solid #ffa800;
+}
+
+.collapse-round__box:hover {
+  border: none;
+}
+
+.collapse-round__box:hover .collapse-round_stroke {
+  stroke: #ffa800;
+}

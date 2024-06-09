@@ -1,0 +1,135 @@
+.carriage {
+    display: flex;
+    align-items: flex-end;
+}
+
+.carriage:nth-last-child(n + 2) {
+    margin-bottom: 28px;
+}
+
+.carriage__name {
+    flex-grow: 1;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+
+    color: #3E3C41;
+}
+
+.carriage__tickets-count {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+
+    color: #FFA800;
+
+    cursor: pointer;
+
+    margin-right: 15px;
+}
+
+.carriage__tickets-descriptions {
+    width: 270px;
+
+    position: absolute;
+    left: -115px; top: 28px;
+    z-index: 9;
+
+    background-color: #E5E5E5;
+
+    white-space: pre-wrap;
+
+    padding: 17px;
+}
+
+.carriage__tickets-descriptions::before,
+.carriage__tickets-descriptions::after {
+  content: '';
+  position: absolute;
+  left: 115px;
+  top: -18px;
+
+  border: 10px solid transparent;
+  border-bottom: 10px solid #E5E5E5;
+}
+
+.carriage__tickets-descriptions::after {
+  border-bottom: 10px solid #E5E5E5;
+
+  top: -18px;
+}
+
+.tickets-descriptions__item {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #000000;
+}
+
+.tickets-descriptions__item:nth-last-child(n + 2) {
+    margin-bottom: 17px;
+}
+
+.tickets-descriptions__count {
+    color: #FFA800;
+}
+
+.tickets-descriptions__cost {
+    width: 80px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.tickets-descriptions__cost_value {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tickets-descriptions__cost_valuta {
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../../../../assets/images/icon_valuta_rubl.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.carriage__cost-box {
+    width: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.carriage__cost_text {
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #928F94;
+}
+
+.carriage__cost_value {
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #2D2B2F;
+}
+
+.carriage__cost_valuta {
+    width: 16px;
+    height: 16px;    
+
+    background-image: url(../../../../assets/images/icon_valuta_rubl.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

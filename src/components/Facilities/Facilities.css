@@ -1,0 +1,95 @@
+.facilities-list {
+    width: 100%;
+}
+
+.facilities__item {
+    height: 56px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 33px;
+}
+
+.facilities__icon {
+    width: 17px;
+    height: 17px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.facilities-icon__compartment {
+    background-image: url(../../assets/images/icon_compartment.svg);
+}
+
+.facilities-icon__econom-class {
+    background-image: url(../../assets/images/icon_econom-class.svg);
+}
+
+.facilities-icon__seat-carriage {
+    background-image: url(../../assets/images/icon_seat-carriage.svg);
+}
+
+.facilities-icon__luxury-carriage {
+    background-image: url(../../assets/images/icon_luxury-carriage.svg);
+}
+
+.facilities-icon__wi-fi {
+    background-image: url(../../assets/images/icon_wi-fi.svg);
+}
+
+.facilities-icon__express {
+    background-image: url(../../assets/images/icon_express.svg);
+}
+
+.facilities__title {
+    flex-grow: 1;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
+    color: #FFFFFF;
+
+    margin-left: 34px;
+}
+
+.facilities-toggle__box {
+    position: relative
+    ;
+    width: 72px;
+    height: 20px;
+
+    border-radius: 10px;
+
+    background-color:#FFFFFF;
+
+    cursor: pointer;
+}
+
+.facilities-toggle__box_active {
+    background-color: #FCDC9D;
+}
+
+.facilities-toggle {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    background-color: #C4C4C4;
+
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+
+.facilities-toggle_active {
+    background-color: #FFA800;
+    top: -4px;
+    right: -4px;
+    left: unset;
+}

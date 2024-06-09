@@ -1,0 +1,16 @@
+.carriage-types__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carriage-types__item {
+  cursor: pointer;
+}
+
+.carriage-types__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+
+  margin-top: 18px;
+}

@@ -1,0 +1,4 @@
+.selection-seats__wrapper {
+    display: flex;
+    justify-content: space-between;
+}

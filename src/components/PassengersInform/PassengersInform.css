@@ -1,0 +1,22 @@
+.passengers-inform {
+  margin-top: 33px;
+}
+
+.passengers-inform__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.passengers-inform__box:nth-child(n + 2) {
+  margin-top: 15px;
+}
+
+.passengers__count {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+  color: #e5e5e5;
+}
