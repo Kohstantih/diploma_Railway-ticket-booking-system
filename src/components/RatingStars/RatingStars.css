@@ -1,0 +1,10 @@
+.rating-stars__list {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-stars__item {
+  cursor: pointer;
+}

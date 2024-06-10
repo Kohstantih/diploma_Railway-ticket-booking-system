@@ -35,7 +35,7 @@ export default function SearchTrainForm({ isVertical }: { isVertical: boolean })
             <button
               onClick={() => switchDirections()}
               type="button"
-              className="search-train__btn_switch"
+              className="search-train__btn-switch"
             ></button>
             <DirectionEnter
               position={'finish'}

@@ -12,6 +12,10 @@
   text-align: right;
 }
 
+.text_bold {
+  font-weight: 700;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);

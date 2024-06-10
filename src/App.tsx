@@ -11,6 +11,7 @@ import AsideTripInfo from './components/AsideTripInfo/AsideTripInfo';
 import PassengerDataList from './components/PassengerDataList/PassengerDataList';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import VerificationPage from './components/VerificationPage/VerificationPage';
+import SuccessfulOrderPage from './components/SuccessfulOrderPage/SuccessfulOrderPage';
 
 import './App.css';
 
@@ -65,7 +66,7 @@ function App() {
               </>
             }
           />
-          <Route path="/successful-order" element={<h1>HELLO</h1>} />
+          <Route path="/successful-order" element={<SuccessfulOrderPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
