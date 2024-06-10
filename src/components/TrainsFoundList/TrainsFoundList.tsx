@@ -1,7 +1,7 @@
-import CounterTrainFound from './CounterTrainFound/CounterTrainFound';
 import FilterTrainsFound from './FilterTrainsFound/FilterTrainsFound';
-import PaginationTrainsFound from './PaginationTrainsFound/PaginationTrainsFound';
+import CounterTrainFound from './CounterTrainFound/CounterTrainFound';
 import TrainsList from './TrainsList/TrainsList';
+import PaginationTrainsFound from './PaginationTrainsFound/PaginationTrainsFound';
 
 import './TrainsFoundList.css';
 

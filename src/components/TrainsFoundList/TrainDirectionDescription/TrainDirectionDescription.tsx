@@ -1,11 +1,12 @@
+import ArrowIcon from '../../Icons/ArrowIcon/ArrowIcon';
 import './TrainDirectionDescription.css';
 
 export default function TrainDirectionDescription({
   direction,
 }: {
-  direction: 'go' | 'back';
+  direction: 'to' | 'from';
 }) {
-  if (direction === 'go') {
+  if (direction === 'to') {
     return (
       <div className="direction-description">
         <div className="direction__point">
@@ -15,7 +16,7 @@ export default function TrainDirectionDescription({
         </div>
         <div className="direction__travel">
           <p className="travel__time">9:42</p>
-          <div className="travel__arrow"></div>
+          <ArrowIcon direction={direction} />
         </div>
         <div className="direction__point">
           <p className="direction__time">9:52</p>
@@ -34,7 +35,7 @@ export default function TrainDirectionDescription({
         </div>
         <div className="direction__travel">
           <p className="travel__time">9:42</p>
-          <div className="travel__arrow travel_back"></div>
+          <ArrowIcon direction={direction} />
         </div>
         <div className="direction__point">
           <p className="direction__time">9:52</p>

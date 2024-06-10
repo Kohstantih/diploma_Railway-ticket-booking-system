@@ -3,24 +3,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Main from './components/Main/Main';
 import TicketPurchaseProgress from './components/TicketPurchaseProgress/TicketPurchaseProgress';
-
-import SearchTrainPage from './components/SearchTrainPage/SearchTrainPage';
-import SelectionOfSeatsPage from './components/SelectionOfSeatsPage/SelectionOfSeatsPage';
-
 import Page from './components/Page/Page';
-import Aside from './components/Aside/Aside';
-
-import './App.css';
-import AsideTittle from './components/AsideTittle/AsideTittle';
-import AsideSection from './components/AsideSection/AsideSection';
-import TransparentArrowIcon from './components/Icons/TransparentArrowIcon/TransparentArrowIcon';
-import DirectionInform from './components/DirectionInform/DirectionInform';
-import PassengerIcon from './components/Icons/PassengerIcon/PassengerIcon';
-import PassengersInform from './components/PassengersInform/PassengersInform';
-import AsideTotalAmount from './components/AsideTotalAmount/AsideTotalAmount';
+import AsideSearchOptions from './components/AsideSearchOptions/AsideSearchOptions';
+import TrainsFoundList from './components/TrainsFoundList/TrainsFoundList';
+import SelectionSeats from './components/SelectionSeats/SelectionSeats';
+import AsideTripInfo from './components/AsideTripInfo/AsideTripInfo';
 import PassengerDataList from './components/PassengerDataList/PassengerDataList';
 import PaymentPage from './components/PaymentPage/PaymentPage';
 import VerificationPage from './components/VerificationPage/VerificationPage';
+
+import './App.css';
 
 function App() {
   return (
@@ -33,8 +25,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={1} />
-                <SearchTrainPage />
-                <Page aside={undefined} content={undefined} />
+                <Page aside={<AsideSearchOptions />} content={<TrainsFoundList />} />
               </>
             }
           />
@@ -43,7 +34,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={1} />
-                <SelectionOfSeatsPage />
+                <Page aside={<AsideSearchOptions />} content={<SelectionSeats />} />
               </>
             }
           />
@@ -52,35 +43,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={2} />
-                <Page
-                  aside={
-                    <Aside
-                      children={[
-                        <AsideTittle key={'aside-tittle'} text="детали поездки" />,
-                        <AsideSection
-                          key={'aside-direction-to'}
-                          icon={<TransparentArrowIcon width={32} direction={'to'} />}
-                          title={'Туда'}
-                          children={<DirectionInform direction={'to'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-direction-from'}
-                          icon={<TransparentArrowIcon width={32} direction={'from'} />}
-                          title={'Обратно'}
-                          children={<DirectionInform direction={'from'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-passenger'}
-                          icon={<PassengerIcon />}
-                          title={'Пассажиры'}
-                          children={<PassengersInform />}
-                        />,
-                        <AsideTotalAmount key={'aside-total-amount'} />,
-                      ]}
-                    />
-                  }
-                  content={<PassengerDataList />}
-                />
+                <Page aside={<AsideTripInfo />} content={<PassengerDataList />} />
               </>
             }
           />
@@ -89,35 +52,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={3} />
-                <Page
-                  aside={
-                    <Aside
-                      children={[
-                        <AsideTittle key={'aside-tittle'} text="детали поездки" />,
-                        <AsideSection
-                          key={'aside-direction-to'}
-                          icon={<TransparentArrowIcon width={32} direction={'to'} />}
-                          title={'Туда'}
-                          children={<DirectionInform direction={'to'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-direction-from'}
-                          icon={<TransparentArrowIcon width={32} direction={'from'} />}
-                          title={'Обратно'}
-                          children={<DirectionInform direction={'from'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-passenger'}
-                          icon={<PassengerIcon />}
-                          title={'Пассажиры'}
-                          children={<PassengersInform />}
-                        />,
-                        <AsideTotalAmount key={'aside-total-amount'} />,
-                      ]}
-                    />
-                  }
-                  content={<PaymentPage />}
-                />
+                <Page aside={<AsideTripInfo />} content={<PaymentPage />} />
               </>
             }
           />
@@ -126,35 +61,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={4} />
-                <Page
-                  aside={
-                    <Aside
-                      children={[
-                        <AsideTittle key={'aside-tittle'} text="детали поездки" />,
-                        <AsideSection
-                          key={'aside-direction-to'}
-                          icon={<TransparentArrowIcon width={32} direction={'to'} />}
-                          title={'Туда'}
-                          children={<DirectionInform direction={'to'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-direction-from'}
-                          icon={<TransparentArrowIcon width={32} direction={'from'} />}
-                          title={'Обратно'}
-                          children={<DirectionInform direction={'from'} />}
-                        />,
-                        <AsideSection
-                          key={'aside-passenger'}
-                          icon={<PassengerIcon />}
-                          title={'Пассажиры'}
-                          children={<PassengersInform />}
-                        />,
-                        <AsideTotalAmount key={'aside-total-amount'} />,
-                      ]}
-                    />
-                  }
-                  content={<VerificationPage />}
-                />
+                <Page aside={<AsideTripInfo />} content={<VerificationPage />} />
               </>
             }
           />

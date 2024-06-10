@@ -36,18 +36,8 @@
   line-height: 21px;
 
   color: #c4c4c4;
-}
 
-.travel__arrow {
-  width: 30px;
-  height: 20px;
-
-  background-image: url(../../../assets/images/icon_arrow_orange.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .travel_back {

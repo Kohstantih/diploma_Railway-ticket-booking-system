@@ -23,13 +23,12 @@ export default function TrainsListItem() {
       <div className="train-found__body">
         <div className="train-found__directions-container">
           <div className="direction-description__wrapper">
-            <TrainDirectionDescription direction={'go'} />
+            <TrainDirectionDescription direction={'to'} />
           </div>
           <div className="direction-description__wrapper">
-            <TrainDirectionDescription direction={'back'} />
+            <TrainDirectionDescription direction={'from'} />
           </div>
         </div>
-        <div className="train-found__boundary"></div>
         <div className="choosing-seat__menu-container">
           <ChoosingSeatMenu />
         </div>

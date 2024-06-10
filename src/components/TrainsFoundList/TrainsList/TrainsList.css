@@ -70,13 +70,8 @@
   margin-bottom: 63px;
 }
 
-.train-found__boundary {
-  height: 100%;
-  width: 1px;
-
-  background-color: #e5e5e5;
-}
-
 .choosing-seat__menu-container {
   min-width: 282px;
+
+  border-left: 1px solid #e5e5e5;
 }

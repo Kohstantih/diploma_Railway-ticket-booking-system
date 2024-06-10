@@ -45,8 +45,8 @@ export default function PassengerCardList() {
 
   return (
     <ul className="passenger-card__list">
-      {passengerList.map((item) => (
-        <li className="passenger-card__item">
+      {passengerList.map((item, index) => (
+        <li key={index} className="passenger-card__item">
           <PassengerCard passenger={item} />
         </li>
       ))}

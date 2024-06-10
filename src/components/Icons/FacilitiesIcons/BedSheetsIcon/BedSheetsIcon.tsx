@@ -19,7 +19,7 @@ export default function BedSheetsIcon({ status }: TFacilitiesIconsProps) {
           className="facilities__icon_color"
         />
       </svg>
-        <span className="facilities__clue">белье</span>
+      <span className="facilities__clue">белье</span>
     </div>
   );
 }

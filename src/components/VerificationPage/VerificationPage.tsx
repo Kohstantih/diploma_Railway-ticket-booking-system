@@ -29,8 +29,8 @@ export default function VerificationPage() {
               <PassengerCardList />
             </div>
             <div className="verification__aside">
-              <p className="verification__total-cost">
-                <span>Всего</span>
+              <div className="verification__total-cost">
+                <p>Всего</p>
                 <CostWidget
                   value={7760}
                   valueColor={'#292929'}
@@ -38,7 +38,7 @@ export default function VerificationPage() {
                   valutaWidth={20}
                   valutaColor={'#928F94'}
                 />
-              </p>
+              </div>
               <ButtonEdit tittle={'Изменить'} onClick={() => navigator('/passengers')} />
             </div>
           </div>

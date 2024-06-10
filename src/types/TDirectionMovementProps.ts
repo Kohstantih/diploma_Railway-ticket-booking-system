@@ -1,4 +1,4 @@
 export type TDirectionMovementProps = { 
-    direction: 'go' | 'back'; 
+    direction: 'to' | 'from'; 
     title: string;
 };
