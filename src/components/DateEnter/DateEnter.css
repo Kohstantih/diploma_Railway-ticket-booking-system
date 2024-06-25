@@ -60,6 +60,8 @@
   top: 72px;
   left: -14px;
   z-index: 99;
+
+  animation: popover 0.3s linear;
 }
 
 .date-enter_aside .date-enter__calendar-wrapper {

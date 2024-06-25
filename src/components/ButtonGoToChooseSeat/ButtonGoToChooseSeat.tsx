@@ -7,7 +7,7 @@ import './ButtonGoToChooseSeat.css';
 export default function ButtonGoToChooseSeat({ objectRoute }: { objectRoute: TRouteObject }) {
   const { available_seats, departure, arrival } = objectRoute;
   const navigator = useNavigate();
-  console.log(departure, arrival);
+  
   return (
     <button
       onClick={() => {

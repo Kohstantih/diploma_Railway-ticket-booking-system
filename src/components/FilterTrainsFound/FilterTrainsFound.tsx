@@ -34,21 +34,25 @@ export default function FilterTrainsFound() {
     <div ref={filtersRef} onClick={() => showPopover()} className="filters__container">
       <p className="filters__active">{filtersList.find((o) => o.id === sort)?.name}</p>
       {isOpen && (
-        <ul className="filters__list">
-          {filtersList.map((item) => (
-            <li
-              key={item.id}
-              onClick={(e) => {
-                e.stopPropagation();
-                dispatch(setOptionSort(item.id));
-                hidePopover();
-              }}
-              className={item.id === sort ? 'filters__item filters__item_active' : 'filters__item'}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
+        <div className="filters__list-wrapper">
+          <ul className="filters__list">
+            {filtersList.map((item) => (
+              <li
+                key={item.id}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  dispatch(setOptionSort(item.id));
+                  hidePopover();
+                }}
+                className={
+                  item.id === sort ? 'filters__item filters__item_active' : 'filters__item'
+                }
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

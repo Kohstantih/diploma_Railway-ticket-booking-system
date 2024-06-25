@@ -23,3 +23,16 @@
   height: 1px;
   margin: -1px;
 }
+
+@keyframes popover {
+  0% {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+  100% {
+    overflow: unset;
+    height: 500px;
+    opacity: 1;
+  }
+}
