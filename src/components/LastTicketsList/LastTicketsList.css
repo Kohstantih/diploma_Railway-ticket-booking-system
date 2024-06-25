@@ -1,4 +1,4 @@
-.last-tickets__tittle {
+.last-tickets__title {
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
@@ -63,7 +63,7 @@
 }
 
 .last-ticket__cost-box {
-  width: 140px;
+  max-width: 150px;
 
   display: flex;
   justify-content: space-between;
@@ -75,4 +75,6 @@
   font-weight: 400;
 
   color: #928f94;
+
+  margin-right: 10px;
 }

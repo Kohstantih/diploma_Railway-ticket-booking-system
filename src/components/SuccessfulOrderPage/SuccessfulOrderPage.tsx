@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import CostWidget from '../CostWidget/CostWidget';
-import RatingStars from '../RatingStars/RatingStars';
+import CostWidget from 'components/CostWidget/CostWidget';
+import RatingStars from 'components/RatingStars/RatingStars';
 
 import './SuccessfulOrderPage.css';
 
 export default function SuccessfulOrderPage() {
-    const navigator = useNavigate();
+  const navigator = useNavigate();
   const [rating, setRating] = useState(0);
+
+  console.log(rating);
 
   return (
     <div className="wrapper">

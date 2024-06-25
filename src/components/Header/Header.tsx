@@ -58,7 +58,7 @@ export default function Header() {
         )}
         {page === 'order' && (
           <div className="wrapper">
-            <h1 className="header-order__tittle">Благодарим Вас за заказ!</h1>
+            <h1 className="header-order__title">Благодарим Вас за заказ!</h1>
           </div>
         )}
       </header>

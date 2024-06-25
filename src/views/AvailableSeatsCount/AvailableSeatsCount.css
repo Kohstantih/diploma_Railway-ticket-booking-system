@@ -1,0 +1,11 @@
+.available-seats__container {
+  position: relative;
+  cursor: pointer;
+}
+
+.available-seats__count {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffa800;
+}

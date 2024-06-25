@@ -1,3 +1,3 @@
 export type TFacilitiesIconsProps = {
-    status: 'disabled' | 'inactive' | 'active';
-}
+  status: 'disabled' | 'inactive' | 'active';
+};

@@ -1,0 +1,12 @@
+.train-found__item {
+  width: 959px;
+
+  color: #3e3c41;
+
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #0000004d;
+}
+
+.train-found__item:nth-last-child(n + 2) {
+  margin-bottom: 47px;
+}

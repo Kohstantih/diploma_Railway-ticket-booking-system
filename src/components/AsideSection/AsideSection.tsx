@@ -7,10 +7,12 @@ import './AsideSection.css';
 export default function AsideSection({
   icon,
   title,
+  isActive,
   children,
 }: {
   icon: React.ReactNode;
   title: string;
+  isActive: boolean;
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,14 @@ export default function AsideSection({
       <div className="aside-section__header">
         {icon}
         <h5 className="aside-section__title">{title}</h5>
-        <CollapseSquareIcon isActive={isOpen} setIsActive={setIsOpen} />
+        <CollapseSquareIcon isOpen={isOpen} toggleIsOpen={() => {
+          if (!isActive) {
+            setIsOpen(false);
+            return;
+          }
+
+          setIsOpen(status => !status);
+          }} />
       </div>
       {isOpen && <div className="aside-section__body">{children}</div>}
     </>

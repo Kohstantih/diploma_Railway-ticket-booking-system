@@ -1,8 +1,16 @@
 import { useCallback, useEffect, useRef } from 'react';
 
+import { TRangeObject } from 'types/TRangeObject';
+
 import './TimeLineUp.css';
 
-export default function TimeLineUp({ range, changeRange }) {
+export default function TimeLineUp({
+  range,
+  changeRange,
+}: {
+  range: TRangeObject;
+  changeRange: React.Dispatch<React.SetStateAction<TRangeObject>>;
+}) {
   const { from, to } = range;
 
   const scaleEl = useRef<HTMLDivElement>(null);

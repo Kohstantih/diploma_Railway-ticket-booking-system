@@ -1,15 +1,15 @@
 import './CollapseSquareIcon.css';
 
 export default function CollapseSquareIcon({
-  isActive,
-  setIsActive,
+  isOpen,
+  toggleIsOpen,
 }: {
-  isActive: boolean;
-  setIsActive: (prop: boolean) => void;
+  isOpen: boolean;
+  toggleIsOpen: () => void;
 }) {
   return (
-    <div onClick={() => setIsActive(!isActive)} className="collapse-square__container">
-      {!isActive && (
+    <div onClick={() => toggleIsOpen()} className="collapse-square__container">
+      {!isOpen && (
         <svg
           width="20"
           height="20"
@@ -34,7 +34,7 @@ export default function CollapseSquareIcon({
           />
         </svg>
       )}
-      {isActive && (
+      {isOpen && (
         <svg
           width="20"
           height="20"

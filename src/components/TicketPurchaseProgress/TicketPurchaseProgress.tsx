@@ -2,8 +2,6 @@ import { useCallback, useMemo } from 'react';
 
 import './TicketPurchaseProgress.css';
 
-const t = '';
-
 export default function TicketPurchaseProgress({ stage }: { stage: number }) {
   const stageTitles = useMemo(() => {
     return ['Билеты', 'Пассажиры', 'Оплата', 'Проверка'];

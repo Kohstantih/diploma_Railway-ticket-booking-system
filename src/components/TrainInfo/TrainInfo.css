@@ -1,0 +1,87 @@
+.train-info {
+  display: flex;
+}
+
+.train-info__aside {
+
+  width: 196px;
+
+  background-color: #e4e0e9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 0 30px 0;
+}
+
+.train-info__number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+
+  margin-top: 17px;
+}
+
+.train-directions {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+
+  margin-top: 15px;
+}
+
+.train-directions__start {
+  color: #928f94;
+}
+
+.train-info__body {
+  flex-grow: 1;
+
+  display: flex;
+}
+
+.train-info__directions-container {
+  width: 100%;
+  padding-top: 52px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.train-info__directions-wrapper {
+  margin-bottom: 63px;
+}
+
+.train-info__seats-container {
+  min-width: 282px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-left: 1px solid #e5e5e5;
+
+  padding: 40px 18px 23px 18px;
+}
+
+.train-info__carriages-wrapper {
+  flex-grow: 1;
+}
+
+.train-info__facilities {
+  width: 92px;
+  height: 20px;
+
+  background-image: url(assets/images/icon_choosing-seat_facilities.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-top: 31px;
+  margin-left: auto;
+}

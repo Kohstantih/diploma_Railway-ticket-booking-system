@@ -1,95 +1,94 @@
 .facilities-list {
-    width: 100%;
+  width: 100%;
 }
 
 .facilities__item {
-    height: 56px;
+  height: 56px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding-left: 33px;
+  padding-left: 33px;
 }
 
 .facilities__icon {
-    width: 17px;
-    height: 17px;
+  width: 17px;
+  height: 17px;
 
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .facilities-icon__compartment {
-    background-image: url(../../assets/images/icon_compartment.svg);
+  background-image: url(../../assets/images/icon_compartment.svg);
 }
 
 .facilities-icon__econom-class {
-    background-image: url(../../assets/images/icon_econom-class.svg);
+  background-image: url(../../assets/images/icon_econom-class.svg);
 }
 
 .facilities-icon__seat-carriage {
-    background-image: url(../../assets/images/icon_seat-carriage.svg);
+  background-image: url(../../assets/images/icon_seat-carriage.svg);
 }
 
 .facilities-icon__luxury-carriage {
-    background-image: url(../../assets/images/icon_luxury-carriage.svg);
+  background-image: url(../../assets/images/icon_luxury-carriage.svg);
 }
 
 .facilities-icon__wi-fi {
-    background-image: url(../../assets/images/icon_wi-fi.svg);
+  background-image: url(../../assets/images/icon_wi-fi.svg);
 }
 
 .facilities-icon__express {
-    background-image: url(../../assets/images/icon_express.svg);
+  background-image: url(../../assets/images/icon_express.svg);
 }
 
 .facilities__title {
-    flex-grow: 1;
+  flex-grow: 1;
 
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    color: #FFFFFF;
+  color: #ffffff;
 
-    margin-left: 34px;
+  margin-left: 34px;
 }
 
 .facilities-toggle__box {
-    position: relative
-    ;
-    width: 72px;
-    height: 20px;
+  position: relative;
+  width: 72px;
+  height: 20px;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    background-color:#FFFFFF;
+  background-color: #ffffff;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .facilities-toggle__box_active {
-    background-color: #FCDC9D;
+  background-color: #fcdc9d;
 }
 
 .facilities-toggle {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 
-    border-radius: 50%;
-    background-color: #C4C4C4;
+  border-radius: 50%;
+  background-color: #c4c4c4;
 
-    position: absolute;
-    top: -4px;
-    left: -4px;
+  position: absolute;
+  top: -4px;
+  left: -4px;
 }
 
 .facilities-toggle_active {
-    background-color: #FFA800;
-    top: -4px;
-    right: -4px;
-    left: unset;
+  background-color: #ffa800;
+  top: -4px;
+  right: -4px;
+  left: unset;
 }

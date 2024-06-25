@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 
-import ButtonNext from '../ButtonNext/ButtonNext';
-import ButtonEdit from '../ButtonEdit/ButtonEdit';
-import TrainsListItem from '../TrainsFoundList/TrainsList/TrainsListItem';
-import PassengerCardList from '../PassengerCardList/PassengerCardList';
-import CostWidget from '../CostWidget/CostWidget';
+import ButtonEdit from 'components/ButtonEdit/ButtonEdit';
+import ButtonNext from 'components/ButtonNext/ButtonNext';
+import CostWidget from 'components/CostWidget/CostWidget';
+import PassengerCardList from 'components/PassengerCardList/PassengerCardList';
 
 import './VerificationPage.css';
+import TrainInfo from 'components/TrainInfo/TrainInfo';
 
 export default function VerificationPage() {
   const navigator = useNavigate();
@@ -18,7 +18,7 @@ export default function VerificationPage() {
           <div className="verification__header">
             <h4 className="verification__tittle">Поезд</h4>
           </div>
-          <TrainsListItem />
+          <TrainInfo />
         </li>
         <li className="verification__item">
           <div className="verification__header">

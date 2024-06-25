@@ -1,8 +1,8 @@
 export type TCardObject = {
-    image: string,
-    content: string,
-}
+  image: string;
+  content: string;
+};
 
 export type TManualCardProps = {
-    cardObject: TCardObject
-}
+  cardObject: TCardObject;
+};

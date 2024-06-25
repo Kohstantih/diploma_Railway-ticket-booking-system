@@ -8,10 +8,11 @@
 
 .date-picker {
   font-size: 30px;
+  font-weight: 400;
   text-align: right;
 }
 
-.date-picker:nth-last-child(1) {
+.date-picker:last-child {
   font-weight: bold;
 }
 
@@ -29,10 +30,6 @@
 
 .date-picker_other-month {
   color: #dad9d9;
-}
-
-.date-picker_week-end {
-  font-weight: bold;
 }
 
 .date-picker_active {

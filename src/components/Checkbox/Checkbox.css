@@ -24,7 +24,7 @@
 .checkbox_on .checkbox__label {
   border: 1px solid #ffa800;
 
-  background-image: url(../../assets/images/icon_checkbox_ok.svg);
+  background-image: url(assets/images/icon_checkbox_ok.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

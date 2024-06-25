@@ -1,6 +1,6 @@
 import { facilitiesIconsClassesList } from '../facilitiesIconsClassesList';
 
-import { TFacilitiesIconsProps } from '../../../../types/TFacilitiesIconsProps';
+import { TFacilitiesIconsProps } from 'types/TFacilitiesIconsProps';
 
 import '../FacilitiesIcons.css';
 

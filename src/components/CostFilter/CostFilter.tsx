@@ -1,19 +1,33 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+import { useAppDispatch } from 'hooks/redux';
+import { setOptionPrice } from 'state/reducers/setSearchOptionsSlice';
 
 import './CostFilter.css';
 
 export default function CostFilter() {
-  const [range, setRange] = useState({ min: 1920, current: 7000, max: 7000 });
+  const [range, setRange] = useState({ min: 0, current: 10000, max: 10000 });
   const [shareCost, setShareCost] = useState(100);
+
+  const minWidget = useRef<HTMLParagraphElement>(null);
   const currentWidget = useRef<HTMLParagraphElement>(null);
+  const maxWidget = useRef<HTMLParagraphElement>(null);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setOptionPrice({ option: 'priceFrom', value: range.min }));
+    dispatch(setOptionPrice({ option: 'priceTo', value: range.current }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, range.current, range.min]);
 
   return (
     <div className="cost-filter">
-      <h5 className="cost-filter__tittle">Стоимость</h5>
+      <h5 className="cost-filter__title">Стоимость</h5>
       <div className="cost-filter__box">
-        <div className="cost-filter__limits-tittles">
-          <p className="limits-tittle">от</p>
-          <p className="limits-tittle">до</p>
+        <div className="cost-filter__limits-titles">
+          <p className="limits-title">от</p>
+          <p className="limits-title">до</p>
         </div>
         <div
           onClick={(e) => {
@@ -24,20 +38,20 @@ export default function CostFilter() {
 
             setShareCost(Math.round(share * 100));
             setRange((obj) => {
-              const result =
-                Math.round((share * (max - min) + min) / 100) * 100;
+              const result = Math.round((share * (max - min) + min) / 100) * 100;
               obj.current = result > max ? max : result;
               return obj;
             });
 
-            if (currentWidget.current) {
-              const { width: currentWidth } =
-                currentWidget.current.getBoundingClientRect();
+            if (currentWidget.current && minWidget.current && maxWidget.current) {
+              const { width: currentWidth } = currentWidget.current.getBoundingClientRect();
+              const { width: minWidgetWidth } = minWidget.current.getBoundingClientRect();
+              const { width: maxWidgetWidth } = maxWidget.current.getBoundingClientRect();
 
               const value = currentWidth ? currentWidth : 32;
 
-              const minLeft = value + 5;
-              const maxLeft = width - 2 * value - 5;
+              const minLeft = minWidgetWidth + 5;
+              const maxLeft = width - 2 * maxWidgetWidth + 5;
               const newLeft = clickX - x - value * 0.85;
 
               if (newLeft > minLeft && newLeft < maxLeft) {
@@ -63,15 +77,15 @@ export default function CostFilter() {
           </div>
         </div>
         <div className="cost-filter__limits-values">
-          <p className="limits-value">{range.min}</p>
-          <p
-            ref={currentWidget}
-            className="limits-value limits-value_current"
-            style={{}}
-          >
+          <p ref={minWidget} className="limits-value">
+            {range.min}
+          </p>
+          <p ref={currentWidget} className="limits-value limits-value_current">
             {range.current < range.max && range.current}
           </p>
-          <p className="limits-value">{range.max}</p>
+          <p ref={maxWidget} className="limits-value">
+            {range.max}
+          </p>
         </div>
       </div>
     </div>

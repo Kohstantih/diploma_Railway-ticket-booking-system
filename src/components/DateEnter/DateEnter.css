@@ -26,6 +26,7 @@
   border-radius: 3px;
 
   padding: 20px;
+  cursor: pointer;
 }
 
 .date-enter_aside .date-enter__input {
@@ -36,7 +37,6 @@
   align-self: center;
 
   margin-right: 17px;
-
   cursor: pointer;
 }
 
@@ -64,5 +64,5 @@
 
 .date-enter_aside .date-enter__calendar-wrapper {
   top: 55px;
-  left: -29px;
+  left: -24px;
 }

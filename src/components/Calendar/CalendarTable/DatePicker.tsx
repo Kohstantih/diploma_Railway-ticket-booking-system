@@ -14,11 +14,7 @@ export default function DatePicker({
     return <td className={'date-picker date-picker_other-month'}>{value}</td>;
 
   if (status === 'thisMonth' && value < thisDay) {
-    return (
-      <td className={'date-picker date-picker_this-month this-month_last'}>
-        {value}
-      </td>
-    );
+    return <td className={'date-picker date-picker_this-month this-month_last'}>{value}</td>;
   } else if (status === 'thisMonth' && value >= thisDay) {
     const classes = checked === value ? ' date-picker_active' : '';
 

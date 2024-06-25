@@ -1,0 +1,32 @@
+.trains-search {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+
+  color: #928f94;
+}
+
+.trains-search__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting__container {
+  display: flex;
+}
+
+.sorting__filter-types {
+  display: flex;
+}
+
+.sorting__count {
+  display: flex;
+}
+
+.trains-list__wrapper {
+  margin-top: 47px;
+}
+
+.pagination-trains__wrapper {
+  margin-top: 142px;
+}

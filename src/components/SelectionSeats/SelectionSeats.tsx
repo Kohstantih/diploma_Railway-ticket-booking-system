@@ -1,11 +1,13 @@
 import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import TrainDetails from './TrainDetails/TrainDetails';
 
 import './SelectionSeats.css';
 
 export default function SelectionSeats() {
+  const { state } = useLocation();
+
   const navigator = useNavigate();
 
   const [isActiveBtn, setIsActiveBtn] = useState(true);

@@ -1,0 +1,20 @@
+.loading {
+  height: 775px;
+  width: 100%;
+
+  background-image: url('assets/images/loading_animation.gif');
+  background-position: center;
+  background-size: cover;
+
+  padding-top: 260px;
+}
+
+.loading__tittle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #928f94;
+}

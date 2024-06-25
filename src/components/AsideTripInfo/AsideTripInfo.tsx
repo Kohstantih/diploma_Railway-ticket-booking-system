@@ -1,11 +1,11 @@
-import Aside from '../Aside/Aside';
-import AsideTittle from '../AsideTittle/AsideTittle';
-import AsideSection from '../AsideSection/AsideSection';
-import TransparentArrowIcon from '../Icons/TransparentArrowIcon/TransparentArrowIcon';
-import DirectionInform from '../DirectionInform/DirectionInform';
-import PassengerIcon from '../Icons/PassengerIcon/PassengerIcon';
-import PassengersInform from '../PassengersInform/PassengersInform';
-import AsideTotalAmount from '../AsideTotalAmount/AsideTotalAmount';
+import Aside from 'components/Aside/Aside';
+import AsideTitle from 'components/AsideTitle/AsideTitle';
+import AsideSection from 'components/AsideSection/AsideSection';
+import TransparentArrowIcon from 'components/Icons/TransparentArrowIcon/TransparentArrowIcon';
+import DirectionInform from 'components/DirectionInform/DirectionInform';
+import PassengerIcon from 'components/Icons/PassengerIcon/PassengerIcon';
+import PassengersInform from 'components/PassengersInform/PassengersInform';
+import AsideTotalAmount from 'components/AsideTotalAmount/AsideTotalAmount';
 
 import './AsideTripInfo.css';
 
@@ -13,7 +13,7 @@ export default function AsideTripInfo() {
   return (
     <Aside
       children={[
-        <AsideTittle key={'aside-tittle'} text="детали поездки" />,
+        <AsideTitle key={'aside-title'} text="детали поездки" />,
         <AsideSection
           key={'aside-direction-to'}
           icon={<TransparentArrowIcon width={32} direction={'to'} />}

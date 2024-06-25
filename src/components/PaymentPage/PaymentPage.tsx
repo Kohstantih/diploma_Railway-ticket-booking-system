@@ -69,7 +69,11 @@ export default function PaymentPage() {
         </div>
       </div>
       <div className="payment-btn__wrapper">
-        <ButtonNext tittle={'Купить билеты'} isActive={true} onClick={() => navigator('/verification')} />
+        <ButtonNext
+          tittle={'Купить билеты'}
+          isActive={true}
+          onClick={() => navigator('/verification')}
+        />
       </div>
     </div>
   );

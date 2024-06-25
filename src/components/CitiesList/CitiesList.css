@@ -1,7 +1,6 @@
 .cities-list {
   width: 325px;
   min-height: 57px;
-  max-height: 255px;
 
   border-radius: 3px;
 
@@ -9,26 +8,24 @@
 
   box-shadow: 0px 4px 4px 0px #00000040;
 
-  overflow: scroll;
-
   padding: 15px 25px 15px 25px;
 }
 
 .cities-list__item {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    color: #292929;
+  color: #292929;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cities-list__item:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .cities-list__item:nth-child(n + 2) {
-    margin-top: 7px;
+  margin-top: 7px;
 }

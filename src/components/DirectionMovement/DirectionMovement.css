@@ -1,80 +1,3 @@
-.direction-movement {
-  width: 100%;
-}
-
-.direction-movement__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.direction-movement__icon {
-  width: 32px;
-  height: 26px;
-
-  background-image: url('../../assets/images/arrow_direction.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  border-radius: 5px;
-}
-
-.direction-movement__icon_go {
-  transform: rotate(180deg);
-}
-
-.direction-movement__title {
-  flex-grow: 1;
-
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 35px;
-  text-align: left;
-
-  color: #ffffff;
-
-  margin-left: 12px;
-}
-
-.toggle__btn {
-  background-color: transparent;
-}
-
-.toggle__icon {
-  width: 20px;
-  height: 20px;
-  fill: none;
-}
-
-.toggle__btn:hover .toggle__icon-cross {
-  fill: #fcdc9d;
-}
-
-.toggle__btn:hover .toggle__icon-cross_border {
-  stroke: #fcdc9d;
-}
-
-.toggle__btn:hover .toggle__icon-line {
-  stroke: #fcdc9d;
-}
-
-.toggle__icon-cross {
-  fill: #ffffff;
-}
-
-.toggle__icon-cross_border {
-  stroke: #ffffff;
-}
-
-.toggle__icon-line {
-  stroke: #c4c4c4;
-}
-
-.direction-movement__body {
-  margin-top: 25px;
-}
-
 .time-lineup__container:nth-child(n + 2) {
   margin-top: 69px;
 }
@@ -88,8 +11,4 @@
   color: #e5e5e5;
 
   margin-bottom: 22px;
-}
-
-.tittle_right {
-  text-align: right;
 }

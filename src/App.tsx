@@ -1,17 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Layout from './components/Layout/Layout';
-import Main from './components/Main/Main';
-import TicketPurchaseProgress from './components/TicketPurchaseProgress/TicketPurchaseProgress';
-import Page from './components/Page/Page';
-import AsideSearchOptions from './components/AsideSearchOptions/AsideSearchOptions';
-import TrainsFoundList from './components/TrainsFoundList/TrainsFoundList';
-import SelectionSeats from './components/SelectionSeats/SelectionSeats';
-import AsideTripInfo from './components/AsideTripInfo/AsideTripInfo';
-import PassengerDataList from './components/PassengerDataList/PassengerDataList';
-import PaymentPage from './components/PaymentPage/PaymentPage';
-import VerificationPage from './components/VerificationPage/VerificationPage';
-import SuccessfulOrderPage from './components/SuccessfulOrderPage/SuccessfulOrderPage';
+import Layout from 'components/Layout/Layout';
+import Main from 'pages/Main/Main';
+import TicketPurchaseProgress from 'components/TicketPurchaseProgress/TicketPurchaseProgress';
+import Page from 'components/Page/Page';
+import AsideSearchOptions from 'components/AsideSearchOptions/AsideSearchOptions';
+
+import TrainsSearchPage from 'pages/TrainsSearchPage/TrainsSearchPage'; //
+
+import SelectionSeats from 'components/SelectionSeats/SelectionSeats';
+import AsideTripInfo from 'components/AsideTripInfo/AsideTripInfo';
+import PassengerDataList from 'components/PassengerDataList/PassengerDataList';
+import PaymentPage from 'components/PaymentPage/PaymentPage';
+import VerificationPage from 'components/VerificationPage/VerificationPage';
+import SuccessfulOrderPage from 'components/SuccessfulOrderPage/SuccessfulOrderPage';
 
 import './App.css';
 
@@ -26,7 +28,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={1} />
-                <Page aside={<AsideSearchOptions />} content={<TrainsFoundList />} />
+                <Page aside={<AsideSearchOptions />} content={<TrainsSearchPage />} />
               </>
             }
           />

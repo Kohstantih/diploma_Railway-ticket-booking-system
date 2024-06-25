@@ -1,0 +1,56 @@
+.available-seats__list {
+  width: 270px;
+
+  position: absolute;
+  left: -115px;
+  top: 28px;
+  z-index: 9;
+
+  background-color: #e5e5e5;
+  border-radius: 5px;
+
+  white-space: pre-wrap;
+
+  padding: 17px;
+}
+
+.available-seats__list::before,
+.available-seats__list::after {
+  content: '';
+  position: absolute;
+  left: 115px;
+  top: -18px;
+
+  border: 10px solid transparent;
+  border-bottom: 10px solid #e5e5e5;
+}
+
+.available-seats__list::after {
+  border-bottom: 10px solid #e5e5e5;
+
+  top: -18px;
+}
+
+.available-seats__item {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  color: #000000;
+}
+
+.available-seats__item:nth-last-child(n + 2) {
+  margin-bottom: 17px;
+}
+
+.seats__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.seats__count {
+  color: #ffa800;
+}

@@ -1,0 +1,11 @@
+.aside-title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #e5e5e5;
+
+  padding-top: 12px;
+}

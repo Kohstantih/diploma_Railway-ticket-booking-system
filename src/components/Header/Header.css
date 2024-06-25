@@ -12,7 +12,7 @@
 }
 
 .header__order {
-    height: 834px;
+  height: 834px;
 }
 
 .header__lining_mask {
@@ -112,13 +112,13 @@
   padding: 28px 45px 0px 45px;
 }
 
-.header-order__tittle {
+.header-order__title {
   font-size: 72px;
   font-weight: 700;
   line-height: 84px;
   text-align: left;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   margin-top: 350px;
 }
