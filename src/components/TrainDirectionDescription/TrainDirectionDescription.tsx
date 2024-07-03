@@ -1,4 +1,4 @@
-import ArrowIcon from 'components/Icons/ArrowIcon/ArrowIcon';
+import ArrowIcon from 'views/ArrowIcon/ArrowIcon';
 
 import { convertSecondsToTimeString } from 'funcs/convertSecondsToTimeString';
 import capitalizedString from 'funcs/capitalizedString';

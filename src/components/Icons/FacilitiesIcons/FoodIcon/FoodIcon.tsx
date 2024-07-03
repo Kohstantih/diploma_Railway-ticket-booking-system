@@ -1,10 +1,8 @@
 import { facilitiesIconsClassesList } from '../facilitiesIconsClassesList';
 
-import { TFacilitiesIconsProps } from 'types/TFacilitiesIconsProps';
-
 import '../FacilitiesIcons.css';
 
-export default function FoodIcon({ status }: TFacilitiesIconsProps) {
+export default function FoodIcon({ status }: { status: 'disabled' | 'inactive' | 'active' }) {
   return (
     <div className={`facilities__wrapper ${facilitiesIconsClassesList[status]}`}>
       <svg

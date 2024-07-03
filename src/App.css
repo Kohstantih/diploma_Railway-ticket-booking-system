@@ -16,6 +16,10 @@
   font-weight: 700;
 }
 
+.text_black {
+  color: #000000;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);

@@ -7,7 +7,7 @@ import DatePickersAside from 'components/DatePickersAside/DatePickersAside';
 import Facilities from 'components/Facilities/Facilities';
 import CostFilter from 'components/CostFilter/CostFilter';
 import AsideSection from 'components/AsideSection/AsideSection';
-import TransparentArrowIcon from 'components/Icons/TransparentArrowIcon/TransparentArrowIcon';
+import TransparentArrowIcon from 'views/TransparentArrowIcon/TransparentArrowIcon';
 import DirectionMovement from 'components/DirectionMovement/DirectionMovement';
 import LastTicketsList from 'components/LastTicketsList/LastTicketsList';
 

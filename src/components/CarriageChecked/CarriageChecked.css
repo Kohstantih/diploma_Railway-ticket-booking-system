@@ -1,0 +1,96 @@
+.carriage-checked__content {
+  display: flex;
+}
+
+.carriage-checked__aside {
+  width: 190px;
+
+  background-color: #ffd98f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 35px 0 35px 0;
+}
+
+.carriage-checked__aside-tittle {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 84px;
+
+  color: #292929;
+}
+
+.carriage-checked__aside-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.carriage-checked__body {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 33px 59px 0 85px;
+}
+
+.seats-info__list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-right: 100px;
+}
+
+.seats-info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seats-info__tittle {
+  min-width: 100px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #928f94;
+}
+
+.seats-info__name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #000000;
+}
+
+.carriage-checked__facilities-container {
+  width: 183px;
+  flex-shrink: 0;
+}
+
+.carriage-checked__facilities-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #928f94;
+
+  margin-bottom: 20px;
+}
+
+.applicant-info {
+  width: 199px;
+
+  background-color: #f3f3f3;
+
+  padding: 15px;
+  margin: 0 42px 0 auto;
+}

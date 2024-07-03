@@ -1,14 +1,26 @@
 import { useCallback, useEffect, useState } from 'react';
+
 import { months } from '../Months';
 
 import DatePicker from './DatePicker';
 
-import { TCalendarTableProps } from 'types/TCalendarTableProps';
 import { TTimeState } from 'types/TDatePickerProps';
 
 import './CalendarTable.css';
 
-export default function CalendarTable({ setDate, year, month, today, now }: TCalendarTableProps) {
+export default function CalendarTable({
+  setDate,
+  year,
+  month,
+  today,
+  now,
+}: {
+  setDate: (value: string) => void;
+  year: number;
+  month: number;
+  today: number;
+  now: Date;
+}) {
   const [list, setList] = useState<JSX.Element[]>([]);
   const [dateChecked, setDateChecked] = useState<number>(0);
 

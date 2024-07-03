@@ -1,0 +1,26 @@
+.selection-seats {
+  width: 959px;
+}
+
+.selection-seats__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+  text-align: left;
+  text-transform: uppercase;
+
+  color: #292929;
+}
+
+.selection-seats__container {
+  margin-top: 60px;
+}
+
+.selection-seats__container-item:nth-child(n + 2) {
+  margin-top: 29px;
+}
+
+.selection-seats__btn-wrapper {
+  width: 222px;
+  margin: 102px 0 0 auto;
+}

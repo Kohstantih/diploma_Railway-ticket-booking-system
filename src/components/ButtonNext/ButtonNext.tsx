@@ -11,7 +11,10 @@ export default function ButtonNext({
 }) {
   return (
     <button
-      onClick={onClick}
+      onClick={() => {
+        if (!isActive) return;
+        onClick();
+      }}
       type="button"
       className={`btn-next ${isActive ? 'btn-next_active' : 'btn-next_disabled'}`}
     >

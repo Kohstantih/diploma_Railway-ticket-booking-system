@@ -5,10 +5,9 @@ import Main from 'pages/Main/Main';
 import TicketPurchaseProgress from 'components/TicketPurchaseProgress/TicketPurchaseProgress';
 import Page from 'components/Page/Page';
 import AsideSearchOptions from 'components/AsideSearchOptions/AsideSearchOptions';
+import TrainsSearchPage from 'pages/TrainsSearchPage/TrainsSearchPage';
+import TicketsPage from 'pages/TicketsPage/TicketsPage';
 
-import TrainsSearchPage from 'pages/TrainsSearchPage/TrainsSearchPage'; //
-
-import SelectionSeats from 'components/SelectionSeats/SelectionSeats';
 import AsideTripInfo from 'components/AsideTripInfo/AsideTripInfo';
 import PassengerDataList from 'components/PassengerDataList/PassengerDataList';
 import PaymentPage from 'components/PaymentPage/PaymentPage';
@@ -37,7 +36,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={1} />
-                <Page aside={<AsideSearchOptions />} content={<SelectionSeats />} />
+                <Page aside={<AsideSearchOptions />} content={<TicketsPage />} />
               </>
             }
           />

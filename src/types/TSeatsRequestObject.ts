@@ -1,7 +1,9 @@
+import { TCarriageClassNames } from "./TCarriageTypesList";
+
 export type TCoachObject = {
   _id: string; // Идентификатор
   name: string; // Идентификатор
-  class_type: string; // Идентификатор
+  class_type: TCarriageClassNames; // Идентификатор
   have_wifi: boolean; // Имеется WiFi (true/false)
   have_air_conditioning: boolean; // Имеется кондиционер (true/false)
   have_express: boolean; // Экспресс (true/false)

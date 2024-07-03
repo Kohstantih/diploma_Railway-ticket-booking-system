@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import ValutaIcon from '../Icons/ValutaIcon/ValutaIcon';
+import ValutaIcon from 'views/ValutaIcon/ValutaIcon';
 
 import './CostWidget.css';
 

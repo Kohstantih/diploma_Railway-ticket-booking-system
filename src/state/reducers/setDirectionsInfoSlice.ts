@@ -6,10 +6,10 @@ import { TCityObject } from 'types/TRouteObject';
 
 const initialState: TDirectionsInfoSlice = {
   from: {
-    city: { _id: null, name: '' },
+    city: { _id: '', name: '' },
   },
   to: {
-    city: { _id: null, name: '' },
+    city: { _id: '', name: '' },
   },
 };
 
@@ -21,7 +21,7 @@ export const setDirectionsInfoSlice = createSlice({
       state[action.payload.direction].city = action.payload.city;
     },
     clearCity: (state, action: PayloadAction<TDirectionString>) => {
-      state[action.payload].city = { _id: null, name: '' };
+      state[action.payload].city = { _id: '', name: '' };
     },
     switchCity: (state) => {
       const fromCity = state.from.city;

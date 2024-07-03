@@ -18,19 +18,23 @@ export default function TrainCarriagesSeatsList({
 }) {
   const [list, setList] = useState<JSX.Element[]>([]);
 
-  const determinationIdDirection = useCallback((nameClass: 'second' | 'third') => {
-    return departureObj.available_seats_info[nameClass] === availableObj[nameClass] ? departureObj._id : arrivalObj?._id;
-    
-  }, [arrivalObj?._id, availableObj, departureObj._id, departureObj.available_seats_info]);
+  const determinationIdDirection = useCallback(
+    (nameClass: 'second' | 'third') => {
+      return departureObj.available_seats_info[nameClass] === availableObj[nameClass]
+        ? departureObj._id
+        : arrivalObj?._id;
+    },
+    [arrivalObj?._id, availableObj, departureObj._id, departureObj.available_seats_info]
+  );
 
   const minPriceFirst = useCallback(() => {
     let min = 0;
 
-    if (departureObj.price_info.first && !arrivalObj) {
+    if (departureObj.price_info.first && !arrivalObj?.price_info.first) {
       min = departureObj.price_info.first.price;
     } else if (departureObj.price_info.first && arrivalObj?.price_info.first) {
       Math.min(departureObj.price_info.first.price, arrivalObj.price_info.first.price);
-    } else if (arrivalObj) {
+    } else if (arrivalObj?.price_info.first) {
       min = arrivalObj.price_info.first.price;
     }
 
@@ -40,7 +44,7 @@ export default function TrainCarriagesSeatsList({
   const minPriceSecond = useCallback(() => {
     let min = 0;
 
-    if (departureObj.price_info.second && !arrivalObj) {
+    if (departureObj.price_info.second && !arrivalObj?.price_info.second) {
       min = Math.min(
         departureObj.price_info.second.bottom_price,
         departureObj.price_info.second.top_price
@@ -52,7 +56,7 @@ export default function TrainCarriagesSeatsList({
         arrivalObj.price_info.second.bottom_price,
         arrivalObj.price_info.second.top_price
       );
-    } else if (arrivalObj) {
+    } else if (arrivalObj?.price_info.second) {
       min = Math.min(
         arrivalObj.price_info.second.bottom_price,
         arrivalObj.price_info.second.top_price
@@ -65,7 +69,7 @@ export default function TrainCarriagesSeatsList({
   const minPriceThird = useCallback(() => {
     let min = 0;
 
-    if (departureObj.price_info.third && !arrivalObj) {
+    if (departureObj.price_info.third && !arrivalObj?.price_info.third) {
       min = Math.min(
         departureObj.price_info.third.bottom_price,
         departureObj.price_info.third.top_price,
@@ -91,13 +95,13 @@ export default function TrainCarriagesSeatsList({
     return min;
   }, [arrivalObj, departureObj.price_info.third]);
 
-  const minPriceForth = useCallback(() => {
+  const minPriceFourth = useCallback(() => {
     let min = 0;
 
     if (departureObj.price_info.fourth && !arrivalObj) {
       min = departureObj.price_info.fourth.bottom_price;
-    } else if (departureObj.price_info.fourth && arrivalObj?.price_info.fourth) {
-      Math.min(
+    } else if (departureObj.price_info.fourth && arrivalObj && arrivalObj.price_info.fourth) {
+      min = Math.min(
         departureObj.price_info.fourth.bottom_price,
         arrivalObj.price_info.fourth.bottom_price
       );
@@ -137,7 +141,11 @@ export default function TrainCarriagesSeatsList({
         <li key={'carriage-second-class'} className="carriage-seats__item">
           <p className="carriage__name">Купе</p>
           <div className="available-seats__wrapper">
-            <AvailableSeatsCount count={availableObj.second} directionId={determinationIdDirection('second')} typeClass={'second'} />
+            <AvailableSeatsCount
+              count={availableObj.second}
+              directionId={determinationIdDirection('second')}
+              typeClass={'second'}
+            />
           </div>
           <div className="carriage-cost__box">
             <p className="carriage-cost__text">от</p>
@@ -158,7 +166,11 @@ export default function TrainCarriagesSeatsList({
         <li key={'carriage-third-class'} className="carriage-seats__item">
           <p className="carriage__name">Плацкарт</p>
           <div className="available-seats__wrapper">
-            <AvailableSeatsCount count={availableObj.third} directionId={determinationIdDirection('third')} typeClass={'third'} />
+            <AvailableSeatsCount
+              count={availableObj.third}
+              directionId={determinationIdDirection('third')}
+              typeClass={'third'}
+            />
           </div>
           <div className="carriage-cost__box">
             <p className="carriage-cost__text">от</p>
@@ -184,7 +196,7 @@ export default function TrainCarriagesSeatsList({
           <div className="carriage-cost__box">
             <p className="carriage-cost__text">от</p>
             <CostWidget
-              value={minPriceForth()}
+              value={minPriceFourth()}
               valueColor={'#2D2B2F'}
               valueFont={24}
               valutaWidth={16}
@@ -196,7 +208,17 @@ export default function TrainCarriagesSeatsList({
     }
 
     setList(result);
-  }, [availableObj.first, availableObj.fourth, availableObj.second, availableObj.third, determinationIdDirection, minPriceFirst, minPriceForth, minPriceSecond, minPriceThird]);
+  }, [
+    availableObj.first,
+    availableObj.fourth,
+    availableObj.second,
+    availableObj.third,
+    determinationIdDirection,
+    minPriceFirst,
+    minPriceFourth,
+    minPriceSecond,
+    minPriceThird,
+  ]);
 
   return <>{list.length > 0 && <ul className="carriage-seats__list">{list}</ul>}</>;
 }

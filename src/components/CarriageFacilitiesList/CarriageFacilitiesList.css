@@ -1,0 +1,11 @@
+.carriage-facilities__list {
+  width: fit-content;
+
+  display: flex;
+
+  margin: 0 auto;
+}
+
+.carriage-facilities__list-item:nth-child(n + 2) {
+  margin-left: 15px;
+}

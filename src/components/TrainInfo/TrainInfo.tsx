@@ -1,6 +1,6 @@
 import capitalizedString from 'funcs/capitalizedString';
 
-import TrainIcon from 'components/Icons/TrainIcon/TrainIcon';
+import TrainIcon from 'views/TrainIcon/TrainIcon';
 import TrainDirectionDescription from 'components/TrainDirectionDescription/TrainDirectionDescription';
 import TrainCarriageSeatsList from 'components/TrainCarriageSeatsList/TrainCarriageSeatsList';
 
