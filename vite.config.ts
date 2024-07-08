@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'diploma_railway-ticket-booking-system',
+  base: 'https://kohstantih.github.io/diploma_railway-ticket-booking-system/',
   resolve: {
     alias: {
       components: '/src/components',
