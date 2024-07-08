@@ -1,3 +1,3 @@
 # Система бронирования ж/д билетов
 
- [Открыть приложение]()
+ [Открыть приложение](https://kohstantih.github.io/diploma_railway-ticket-booking-system/)

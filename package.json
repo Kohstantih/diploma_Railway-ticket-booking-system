@@ -2,6 +2,7 @@
   "name": "diploma_railway-ticket-booking-system",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://kohstantih.github.io/diploma_railway-ticket-booking-system/",
   "type": "module",
   "scripts": {
     "dev": "vite",
