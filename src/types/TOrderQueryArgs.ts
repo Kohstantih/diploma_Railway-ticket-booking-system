@@ -33,6 +33,6 @@ export type TOrderQueryDirection = {
 
 export type TOrderQueryArgs = {
   user: TOrderQueryUser;
-  departure: TOrderQueryDirection;
+  departure?: TOrderQueryDirection;
   arrival?: TOrderQueryDirection;
 };

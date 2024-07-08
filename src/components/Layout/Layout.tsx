@@ -2,9 +2,9 @@ import { Outlet } from 'react-router-dom';
 
 import ScrollToHashElement from 'components/ScrollToHashElement/ScrollToHashElement';
 import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import FooterNav from 'components/FooterNav/FooterNav';
-import Loading from 'components/Loading/Loading';
+import Footer from 'views/Footer/Footer';
+import FooterNav from 'views/FooterNav/FooterNav';
+import Loading from 'views/Loading/Loading';
 
 import './Layout.css';
 

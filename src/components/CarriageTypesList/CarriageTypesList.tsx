@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
-import SeatCarriageIcon from 'components/Icons/CarriageTypeIcons/SeatCarriageIcon/SeatCarriageIcon';
-import EconomClassCarriageIcon from 'components/Icons/CarriageTypeIcons/EconomClassCarriageIcon/EconomClassCarriageIcon';
-import CompartmentCarriageIcon from 'components/Icons/CarriageTypeIcons/CompartmentCarriageIcon/CompartmentCarriageIcon';
-import LuxuryCarriageIcon from 'components/Icons/CarriageTypeIcons/LuxuryCarriageIcon/LuxuryCarriageIcon';
+import SeatCarriageIcon from 'components/CarriageTypeIcons/SeatCarriageIcon/SeatCarriageIcon';
+import EconomClassCarriageIcon from 'components/CarriageTypeIcons/EconomClassCarriageIcon/EconomClassCarriageIcon';
+import CompartmentCarriageIcon from 'components/CarriageTypeIcons/CompartmentCarriageIcon/CompartmentCarriageIcon';
+import LuxuryCarriageIcon from 'components/CarriageTypeIcons/LuxuryCarriageIcon/LuxuryCarriageIcon';
 import CarriageTypesItem from './CarriageTypesItem';
 
 import { TCarriageClassNames, TCarriageTypesList } from 'types/TCarriageTypesList';

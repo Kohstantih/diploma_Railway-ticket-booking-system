@@ -15,30 +15,33 @@ export default function CarriageLuxury({
 }) {
   const [seatsBox, setSeatsBox] = useState<JSX.Element[]>([]);
 
-  const createNumberElement = useCallback((value: number) => {
-    if (freeSeats.includes(value)) {
-      return (
-        <p
-          key={`seat${value}`}
-          onClick={() => {
-            if (checkedSeats.includes(value)) deleteSeat(value);
-            else addSeat(value);
-          }}
-          className={`seat__number seat__number_luxury seat_free${
-            checkedSeats.includes(value) ? ' seat_checked' : ''
-          }`}
-        >
-          {value}
-        </p>
-      );
-    } else {
-      return (
-        <p key={`seat${value}`} className={`seat__number seat__number_luxury seat_disabled`}>
-          {value}
-        </p>
-      );
-    }
-  }, [addSeat, checkedSeats, deleteSeat, freeSeats]);
+  const createNumberElement = useCallback(
+    (value: number) => {
+      if (freeSeats.includes(value)) {
+        return (
+          <p
+            key={`seat${value}`}
+            onClick={() => {
+              if (checkedSeats.includes(value)) deleteSeat(value);
+              else addSeat(value);
+            }}
+            className={`seat__number seat__number_luxury seat_free${
+              checkedSeats.includes(value) ? ' seat_checked' : ''
+            }`}
+          >
+            {value}
+          </p>
+        );
+      } else {
+        return (
+          <p key={`seat${value}`} className={`seat__number seat__number_luxury seat_disabled`}>
+            {value}
+          </p>
+        );
+      }
+    },
+    [addSeat, checkedSeats, deleteSeat, freeSeats]
+  );
 
   useEffect(() => {
     const result: JSX.Element[] = [];

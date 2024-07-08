@@ -1,52 +1,16 @@
-import { useMemo } from 'react';
+import { useAppSelector } from 'hooks/redux';
 
-import PassengerCard from '../PassengerCard/PassengerCard';
+import PassengerCard from 'views/PassengerCard/PassengerCard';
 
 import './PassengerCardList.css';
 
 export default function PassengerCardList() {
-  const passengerList = useMemo(
-    () => [
-      {
-        status: 'adult',
-        fullName: 'Мартынюк Ирина Эдуардовна',
-        gender: 'female',
-        dob: '17.02.1985',
-        document: {
-          name: 'passport',
-          series: '4204',
-          number: '380694',
-        },
-      },
-      {
-        status: 'children',
-        fullName: 'Мартынюк Кирилл Сергеевич',
-        gender: 'male',
-        dob: '25.01.2006',
-        document: {
-          name: 'certificate',
-          number: 'VIII УН 256319',
-        },
-      },
-      {
-        status: 'adult',
-        fullName: 'Мартынюк Сергей Петрович',
-        gender: 'male',
-        dob: '19.06.1982',
-        document: {
-          name: 'passport',
-          series: '4204',
-          number: '380694',
-        },
-      },
-    ],
-    []
-  );
+  const { passengers } = useAppSelector((state) => state.passengers);
 
   return (
     <ul className="passenger-card__list">
-      {passengerList.map((item, index) => (
-        <li key={index} className="passenger-card__item">
+      {passengers.map((item) => (
+        <li key={item.id} className="passenger-card__item">
           <PassengerCard passenger={item} />
         </li>
       ))}

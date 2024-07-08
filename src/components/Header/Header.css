@@ -30,15 +30,15 @@
 }
 
 .header__image_main {
-  background-image: url('../../assets/images/header_main.svg');
+  background-image: url(assets/images/header_main.svg);
 }
 
 .header__image_other {
-  background-image: url('../../assets/images/header_other.svg');
+  background-image: url(assets/images/header_other.svg);
 }
 
 .header__image_order {
-  background-image: url('../../assets/images/header_order.svg');
+  background-image: url(assets/images/header_order.svg);
 }
 
 .header {

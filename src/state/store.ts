@@ -6,6 +6,7 @@ import { citiesApi } from './services/citiesApi';
 import { lastTicketApi } from './services/lastTicketApi';
 import { routesApi } from './services/routesApi';
 import { seatsApi } from './services/seatsApi';
+import { orderApi } from './services/orderApi';
 
 import { setDirectionsInfoReducer } from './reducers/setDirectionsInfoSlice';
 import { setSearchOptionsReducer } from './reducers/setSearchOptionsSlice';
@@ -14,6 +15,8 @@ import { setTicketCountObjectReducer } from './reducers/setTicketCountObjectSlic
 import { setSeatsCheckedReducer } from './reducers/setSeatsCheckedSlice';
 import { setServicesReducer } from './reducers/setServicesSlice';
 import { setPriceReducer } from './reducers/setPriceSlice';
+import { setPassengersReducer } from './reducers/setPassengersSlice';
+import { setUserInfoReducer } from './reducers/setUserInfoSlice';
 
 export const store = configureStore({
   reducer: {
@@ -22,6 +25,7 @@ export const store = configureStore({
     [lastTicketApi.reducerPath]: lastTicketApi.reducer,
     [routesApi.reducerPath]: routesApi.reducer,
     [seatsApi.reducerPath]: seatsApi.reducer,
+    [orderApi.reducerPath]: orderApi.reducer,
     directionInfo: setDirectionsInfoReducer,
     searchOptions: setSearchOptionsReducer,
     activeRoute: setActiveRouteReducer,
@@ -29,6 +33,8 @@ export const store = configureStore({
     seatsChecked: setSeatsCheckedReducer,
     services: setServicesReducer,
     price: setPriceReducer,
+    passengers: setPassengersReducer,
+    user: setUserInfoReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
@@ -36,7 +42,8 @@ export const store = configureStore({
       citiesApi.middleware,
       lastTicketApi.middleware,
       routesApi.middleware,
-      seatsApi.middleware
+      seatsApi.middleware,
+      orderApi.middleware
     ),
 });
 

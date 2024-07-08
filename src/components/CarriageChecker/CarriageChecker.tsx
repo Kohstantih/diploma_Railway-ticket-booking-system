@@ -15,7 +15,8 @@ export default function CarriageChecker({ direction }: { direction: 'departure' 
   const [activeType, setActiveType] = useState<TCarriageClassNames | null>(null);
 
   const detailsElement = useMemo(() => {
-    if (route && activeType) return (<CarriageDetails direction={direction} type={activeType} route={route} />)
+    if (route && activeType)
+      return <CarriageDetails direction={direction} type={activeType} route={route} />;
   }, [activeType, direction, route]);
 
   const element = useMemo(() => {

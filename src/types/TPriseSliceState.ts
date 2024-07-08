@@ -1,5 +1,11 @@
+export type TPriseSliceStateDirection = {
+  adultPrice: number;
+  childrenPrice: number;
+  total: number;
+};
+
 export type TPriseSliceState = {
-  departure: number;
-  arrival: number;
+  departure: TPriseSliceStateDirection;
+  arrival: TPriseSliceStateDirection;
   total: number;
 };

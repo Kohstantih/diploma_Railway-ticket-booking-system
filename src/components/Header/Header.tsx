@@ -1,9 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import Logo from '../Logo/Logo';
-import Navbar from '../Navbar/Navbar';
-import SearchTrainForm from '../SearchTrainForm/SearchTrainForm';
+import Logo from 'components/Logo/Logo';
+import Navbar from 'components/Navbar/Navbar';
+import SearchTrainForm from 'components/SearchTrainForm/SearchTrainForm';
 
 import './Header.css';
 

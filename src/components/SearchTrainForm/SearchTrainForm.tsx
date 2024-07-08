@@ -6,7 +6,7 @@ import { switchCity } from 'state/reducers/setDirectionsInfoSlice';
 import { setOptionDate } from 'state/reducers/setSearchOptionsSlice';
 
 import DirectionEnter from 'components/DirectionEnter/DirectionEnter';
-import DateEnter from 'components/DateEnter/DateEnter';
+import DateEnter from 'views/DateEnter/DateEnter';
 
 import './SearchTrainForm.css';
 

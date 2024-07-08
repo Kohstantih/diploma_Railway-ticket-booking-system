@@ -2,7 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 
 import './PaginationTrainsFound.css';
 
-export default function PaginationTrainsFound({ countsPage, setOffset }: { countsPage: number, setOffset: (value: number) => void }) {
+export default function PaginationTrainsFound({
+  countsPage,
+  setOffset,
+}: {
+  countsPage: number;
+  setOffset: (value: number) => void;
+}) {
   const [activePage, setActivePage] = useState(1);
   const [pages, setPages] = useState<JSX.Element[]>([]);
 
@@ -16,11 +22,11 @@ export default function PaginationTrainsFound({ countsPage, setOffset }: { count
   );
 
   const incrementActivePage = useCallback(() => {
-    setActivePage((value) => value < countsPage ? value + 1 : countsPage);
+    setActivePage((value) => (value < countsPage ? value + 1 : countsPage));
   }, [countsPage]);
 
   const decrementActivePage = useCallback(() => {
-    setActivePage((value) => value > 1 ? value - 1 : 1);
+    setActivePage((value) => (value > 1 ? value - 1 : 1));
   }, []);
 
   const createItem = useCallback(
@@ -63,7 +69,7 @@ export default function PaginationTrainsFound({ countsPage, setOffset }: { count
     setOffset(activePage);
 
     const result: JSX.Element[] = [];
-    
+
     if (countsPage < 7) {
       for (let i = 1; i <= countsPage; i += 1) {
         createItem(result, i);
@@ -95,7 +101,7 @@ export default function PaginationTrainsFound({ countsPage, setOffset }: { count
     }
 
     setPages(result);
-  }, [activePage, checkClass, countsPage, createItem, createItemUndefined]);
+  }, [activePage, checkClass, countsPage, createItem, createItemUndefined, setOffset]);
 
   if (countsPage < 2) return null;
 

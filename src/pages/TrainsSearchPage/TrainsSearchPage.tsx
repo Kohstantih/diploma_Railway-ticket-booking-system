@@ -8,7 +8,6 @@ import { filtrationObject } from 'funcs/filtrationObject';
 import FilterTrainsFound from 'components/FilterTrainsFound/FilterTrainsFound';
 import CounterTrainFound from 'components/CounterTrainFound/CounterTrainFound';
 import PaginationTrainsFound from 'components/PaginationTrainsFound/PaginationTrainsFound';
-
 import CountTrainsFound from 'views/CountTrainsFound/CountTrainsFound';
 import TrainsList from 'views/TrainsList/TrainsList';
 

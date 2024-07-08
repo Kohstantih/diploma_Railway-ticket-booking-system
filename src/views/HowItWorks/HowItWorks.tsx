@@ -1,23 +1,23 @@
-import ManualCard from './ManualCard/ManualCard';
+import ManualCard from 'views/ManualCard/ManualCard';
 
 import './HowItWorks.css';
 
-export default function HowItWorks() {
-  const cardList = [
-    {
-      image: 'card_monitor',
-      content: 'Удобный заказ на сайте',
-    },
-    {
-      image: 'card_building',
-      content: 'Нет необходимости ехать в офис',
-    },
-    {
-      image: 'card_earth',
-      content: 'Огромный выбор направлений',
-    },
-  ];
+const cardList = [
+  {
+    image: 'card_monitor',
+    content: 'Удобный заказ на сайте',
+  },
+  {
+    image: 'card_building',
+    content: 'Нет необходимости ехать в офис',
+  },
+  {
+    image: 'card_earth',
+    content: 'Огромный выбор направлений',
+  },
+];
 
+export default function HowItWorks() {
   return (
     <section id="manual" className="manual">
       <div className="manual__header">

@@ -1,10 +1,18 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-import { TPriseSliceState } from 'types/TPriseSliceState';
+import { TPriseSliceState, TPriseSliceStateDirection } from 'types/TPriseSliceState';
 
 const initialState: TPriseSliceState = {
-  departure: 0,
-  arrival: 0,
+  departure: {
+    adultPrice: 0,
+    childrenPrice: 0,
+    total: 0,
+  },
+  arrival: {
+    adultPrice: 0,
+    childrenPrice: 0,
+    total: 0,
+  },
   total: 0,
 };
 
@@ -12,10 +20,20 @@ export const setPriceSlice = createSlice({
   name: 'price',
   initialState,
   reducers: {
-    setPrice: (state, action: PayloadAction<{ option: keyof TPriseSliceState; value: number }>) => {
-      const { option, value } = action.payload;
-      state[option] = value;
-      state.total = state.arrival + state.departure;
+    setPrice: (
+      state,
+      action: PayloadAction<{
+        section: keyof TPriseSliceState;
+        option: keyof TPriseSliceStateDirection;
+        value: number;
+      }>
+    ) => {
+      const { section, option, value } = action.payload;
+
+      if (section !== 'total') state[section][option] = value;
+      else state[section] = value;
+
+      state.total = state.arrival.total + state.departure.total;
     },
   },
 });

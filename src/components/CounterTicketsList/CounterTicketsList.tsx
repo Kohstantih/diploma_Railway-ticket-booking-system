@@ -4,17 +4,19 @@ import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { setCount } from 'state/reducers/setTicketCountObjectSlice';
 import { resetSeatCheckedState } from 'state/reducers/setSeatsCheckedSlice';
 
-import EnterCountTicket from 'components/EnterCountTicket/EnterCountTicket';
+import EnterCountTicket from 'views/EnterCountTicket/EnterCountTicket';
 
 import './CounterTicketsList.css';
 
 export default function CounterTicketsList({ direction }: { direction: 'departure' | 'arrival' }) {
-  const { [direction]: countObject } = useAppSelector((state) => state.ticketsCount);
+  const { adultCount, childrenCount, childrenWithoutSeatCount, freeCount } = useAppSelector(
+    (state) => state.ticketsCount
+  );
   const dispatch = useAppDispatch();
 
   const withoutSeatCount = useMemo(
-    () => countObject.adultCount * 2 - countObject.childrenWithoutSeatCount,
-    [countObject.adultCount, countObject.childrenWithoutSeatCount]
+    () => adultCount * 2 - childrenWithoutSeatCount,
+    [adultCount, childrenWithoutSeatCount]
   );
 
   return (
@@ -23,18 +25,18 @@ export default function CounterTicketsList({ direction }: { direction: 'departur
         <div className="counter-tickets__item-wrapper">
           <EnterCountTicket
             text={'Взрослых'}
-            value={countObject.adultCount}
+            value={adultCount}
             setValue={(value) => {
               dispatch(resetSeatCheckedState(direction));
-              dispatch(setCount({ route: direction, option: 'adult', value }));
+              dispatch(setCount({ option: 'adult', value }));
             }}
           />
-          {countObject.freeCount !== 0 && (
+          {freeCount !== 0 && (
             <p className="counter-tickets__details">
               Можно добавить еще
               <br />
-              <span className="text_bold">{countObject.freeCount}</span>{' '}
-              <span>{countObject.freeCount === 1 ? 'пассажира' : 'пассажиров'}</span>
+              <span className="text_bold">{freeCount}</span>{' '}
+              <span>{freeCount === 1 ? 'пассажира' : 'пассажиров'}</span>
             </p>
           )}
         </div>
@@ -43,17 +45,17 @@ export default function CounterTicketsList({ direction }: { direction: 'departur
         <div className="counter-tickets__item-wrapper">
           <EnterCountTicket
             text={'Детских'}
-            value={countObject.childrenCount}
+            value={childrenCount}
             setValue={(value) => {
               dispatch(resetSeatCheckedState(direction));
-              dispatch(setCount({ route: direction, option: 'children', value }));
+              dispatch(setCount({ option: 'children', value }));
             }}
           />
-          {countObject.freeCount !== 0 && (
+          {freeCount !== 0 && (
             <p className="counter-tickets__details">
-              Можно добавить еще <span className="text_bold">{countObject.freeCount}</span>{' '}
-              <span>{countObject.freeCount === 1 ? 'ребёнка' : 'детей'}</span> до 10 лет.Свое место
-              в вагоне, как у взрослых, но дешевле в среднем на 50-65%
+              Можно добавить еще <span className="text_bold">{freeCount}</span>{' '}
+              <span>{freeCount === 1 ? 'ребёнка' : 'детей'}</span> до 10 лет.Свое место в вагоне,
+              как у взрослых, но дешевле в среднем на 50-65%
             </p>
           )}
         </div>
@@ -62,10 +64,8 @@ export default function CounterTicketsList({ direction }: { direction: 'departur
         <div className="counter-tickets__item-wrapper">
           <EnterCountTicket
             text={'Детских «без места»'}
-            value={countObject.childrenWithoutSeatCount}
-            setValue={(value) =>
-              dispatch(setCount({ route: direction, option: 'without-seat', value }))
-            }
+            value={childrenWithoutSeatCount}
+            setValue={(value) => dispatch(setCount({ option: 'without-seat', value }))}
           />
           <p className="counter-tickets__details">
             Можно добавить два <span style={{ fontStyle: 'italic' }}>Детских «без места»</span>{' '}

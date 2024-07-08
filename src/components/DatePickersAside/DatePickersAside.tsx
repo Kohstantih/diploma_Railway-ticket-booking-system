@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { setOptionDate } from 'state/reducers/setSearchOptionsSlice';
 
-import DateEnter from 'components/DateEnter/DateEnter';
+import DateEnter from 'views/DateEnter/DateEnter';
 
 import './DatePickersAside.css';
 

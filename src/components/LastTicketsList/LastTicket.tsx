@@ -1,6 +1,6 @@
 import capitalizedString from 'funcs/capitalizedString';
 
-import CostWidget from '../CostWidget/CostWidget';
+import CostWidget from 'components/CostWidget/CostWidget';
 
 import { TRouteObject } from 'types/TRouteObject';
 

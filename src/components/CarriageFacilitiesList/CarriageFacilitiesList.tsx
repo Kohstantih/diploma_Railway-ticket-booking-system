@@ -3,10 +3,10 @@ import { useMemo } from 'react';
 import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { delService, setService } from 'state/reducers/setServicesSlice';
 
-import ConditionerIcon from 'components/Icons/FacilitiesIcons/ConditionerIcon/ConditionerIcon';
-import WiFiIcon from 'components/Icons/FacilitiesIcons/WiFiIcon/WiFiIcon';
-import BedSheetsIcon from 'components/Icons/FacilitiesIcons/BedSheetsIcon/BedSheetsIcon';
-import FoodIcon from 'components/Icons/FacilitiesIcons/FoodIcon/FoodIcon';
+import ConditionerIcon from 'components/FacilitiesIcons/ConditionerIcon/ConditionerIcon';
+import WiFiIcon from 'components/FacilitiesIcons/WiFiIcon/WiFiIcon';
+import BedSheetsIcon from 'components/FacilitiesIcons/BedSheetsIcon/BedSheetsIcon';
+import FoodIcon from 'components/FacilitiesIcons/FoodIcon/FoodIcon';
 
 import { TFacilitiesList } from 'types/TFacilitiesList';
 import { TCoachObject } from 'types/TSeatsRequestObject';

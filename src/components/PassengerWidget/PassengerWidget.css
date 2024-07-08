@@ -1,0 +1,26 @@
+.passenger-widget__container {
+  display: flex;
+  align-items: center;
+
+  padding: 26px;
+}
+
+.passenger-widget__container_open {
+  border-bottom: 1px solid #928f94;
+  background-color: #f9f9f9;
+}
+
+.passenger-widget__title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: left;
+
+  color: #292929;
+
+  margin-left: 15px;
+}
+
+.passenger-widget__icon-wrapper {
+  margin-left: auto;
+}

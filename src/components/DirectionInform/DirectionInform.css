@@ -1,110 +1,109 @@
 .train-inform__section {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 
-    margin-top: 22px;
+  margin-top: 22px;
 }
 
 .section__number-text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    color: #E5E5E5;
+  color: #e5e5e5;
 }
 
 .section__number-value {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: right;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .section__name-text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    color: #E5E5E5;
+  color: #e5e5e5;
 }
 
 .section__name-value {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: right;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .trip-inform {
-    margin-top: 46px;
+  margin-top: 46px;
 }
 
 .trip-duration {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    text-align: center;
+  text-align: center;
 
-    color: #E5E5E5;
+  color: #e5e5e5;
 
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .trip-date__container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .trip-date__time {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    
-    color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
 
-    margin-bottom: 5px;
+  color: #ffffff;
+
+  margin-bottom: 5px;
 }
 
 .trip-date__full {
-    font-size: 18px;    
-    font-weight: 400;
-    line-height: 21px;
-    text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
 
-    color: #928F94;
+  color: #928f94;
 }
 
 .stations-inform {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .station__box {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .station__city {
-    font-size: 18px;
-    line-height: 21px;
+  font-size: 18px;
+  line-height: 21px;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .station__name {
-    font-size: 16px;
-    line-height: 18px;
+  font-size: 16px;
+  line-height: 18px;
 
-    color: #928F94;
+  color: #928f94;
 }
-

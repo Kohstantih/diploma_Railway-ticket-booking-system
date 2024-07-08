@@ -97,21 +97,21 @@
 }
 
 .seat__number_luxury {
-    width: 26px;
-    height: 58px;
+  width: 26px;
+  height: 58px;
 
-    align-items: flex-end;
-    padding-bottom: 5px;
+  align-items: flex-end;
+  padding-bottom: 5px;
 }
 
 .seat__number_luxury:nth-child(even) {
-    box-shadow: 4px 0 0 #999999;
-    margin: 0 4px 0 34px;
+  box-shadow: 4px 0 0 #999999;
+  margin: 0 4px 0 34px;
 }
 
 .seat__number_luxury:last-child {
-    box-shadow: none;
-    margin: 0 0 0 34px;
+  box-shadow: none;
+  margin: 0 0 0 34px;
 }
 
 .seat_disabled {

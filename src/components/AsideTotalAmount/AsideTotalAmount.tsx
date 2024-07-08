@@ -1,13 +1,17 @@
-import CostWidget from '../CostWidget/CostWidget';
+import CostWidget from 'components/CostWidget/CostWidget';
+
+import { useAppSelector } from 'hooks/redux';
 
 import './AsideTotalAmount.css';
 
 export default function AsideTotalAmount() {
+  const { total } = useAppSelector((state) => state.price);
+
   return (
     <div className="total-amount__container">
       <p className="total-amount__text">итог</p>
       <CostWidget
-        value={7760}
+        value={total}
         valueColor={'#FFA800'}
         valueFont={48}
         valutaWidth={26}

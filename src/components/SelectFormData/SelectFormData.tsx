@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
+
+import usePopover from 'hooks/usePopover';
 
 import './SelectFormData.css';
 
@@ -9,35 +11,13 @@ export default function SelectFormData({
 }: {
   optionList: { value: string; name: string }[];
   activeOption: { value: string; name: string };
-  setActiveOption: ({ value, name }: { value: string; name: string }) => void;
+  setActiveOption: (value: string) => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
   const selectElement = useRef<HTMLDivElement>(null);
-
-  const handleClick = useCallback(
-    (ev: MouseEvent) => {
-      const { target } = ev;
-      if (
-        selectElement.current &&
-        target instanceof Element &&
-        isOpen &&
-        !selectElement.current.contains(target)
-      )
-        setIsOpen(false);
-    },
-    [isOpen]
-  );
-
-  useEffect(() => {
-    window.addEventListener('click', handleClick);
-
-    return () => {
-      window.removeEventListener('click', handleClick);
-    };
-  }, [handleClick, isOpen]);
+  const { isOpen, showPopover, hidePopover } = usePopover(selectElement, false);
 
   return (
-    <div ref={selectElement} onClick={() => setIsOpen(true)} className="data-select__container">
+    <div ref={selectElement} onClick={() => showPopover()} className="data-select__container">
       <p className="data-select__option-selected">{activeOption.name}</p>
       {isOpen && (
         <ul className="data-select__options-list">
@@ -47,8 +27,8 @@ export default function SelectFormData({
               onClick={(e) => {
                 e.stopPropagation();
 
-                setIsOpen(false);
-                setActiveOption(item);
+                hidePopover();
+                setActiveOption(item.value);
               }}
               className="data-select__option"
             >

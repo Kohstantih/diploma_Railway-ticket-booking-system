@@ -5,10 +5,10 @@ import { useAppSelector } from 'hooks/redux';
 import capitalizedString from 'funcs/capitalizedString';
 import { getTimeStringFromSeconds } from 'funcs/getTimeStringFromSeconds';
 import { getTimeObject } from 'funcs/getTimeObject';
+import { checkFromOrTo } from 'funcs/checkFromOrTo';
 
 import CounterTicketsList from 'components/CounterTicketsList/CounterTicketsList';
 import CarriageChecker from 'components/CarriageChecker/CarriageChecker';
-
 import TransparentArrowIcon from 'views/TransparentArrowIcon/TransparentArrowIcon';
 import TrainIcon from 'views/TrainIcon/TrainIcon';
 import ArrowIcon from 'views/ArrowIcon/ArrowIcon';
@@ -19,12 +19,16 @@ import './TrainDetails.css';
 export default function TrainDetails({ direction }: { direction: 'departure' | 'arrival' }) {
   const navigator = useNavigate();
   const { route } = useAppSelector((state) => state.activeRoute);
-  const { [direction]: ticketCount } = useAppSelector((state) => state.ticketsCount);
+  const { checkedCount } = useAppSelector((state) => state.ticketsCount);
 
   const directionClass = useMemo(
     () => (direction === 'departure' ? 'train_go' : 'train_back'),
     [direction]
   );
+
+  const checkDirection = useMemo(() => {
+    return direction === 'departure' ? 'to' : 'from';
+  }, [direction]);
 
   const element = useMemo(() => {
     if (!route) {
@@ -39,10 +43,7 @@ export default function TrainDetails({ direction }: { direction: 'departure' | '
             <div className="train-details__header">
               <div className="train-details__direction">
                 <div className="train-details__arrow-wrapper">
-                  <TransparentArrowIcon
-                    width={76}
-                    direction={direction === 'departure' ? 'to' : 'from'}
-                  />
+                  <TransparentArrowIcon width={76} direction={checkDirection} />
                 </div>
                 <button
                   onClick={() => navigator('/trains')}
@@ -75,26 +76,38 @@ export default function TrainDetails({ direction }: { direction: 'departure' | '
             <div className="train-direction__container">
               <div className="station-descriptions">
                 <p className="station-descriptions__time">
-                  {getTimeStringFromSeconds(routeObject.from.datetime)}
+                  {getTimeStringFromSeconds(
+                    routeObject[checkFromOrTo('from', checkDirection)].datetime
+                  )}
                 </p>
                 <p className="station-descriptions__city">
-                  {capitalizedString(routeObject.from.city.name)}
+                  {capitalizedString(routeObject[checkFromOrTo('from', checkDirection)].city.name)}
                 </p>
                 <p className="station-descriptions__name">
-                  <span>{capitalizedString(routeObject.from.railway_station_name)}</span>{' '}
+                  <span>
+                    {capitalizedString(
+                      routeObject[checkFromOrTo('from', checkDirection)].railway_station_name
+                    )}
+                  </span>{' '}
                   <span>вокзал</span>
                 </p>
               </div>
               <ArrowIcon direction={direction === 'departure' ? 'to' : 'from'} />
               <div className="station-descriptions">
                 <p className="station-descriptions__time">
-                  {getTimeStringFromSeconds(routeObject.to.datetime)}
+                  {getTimeStringFromSeconds(
+                    routeObject[checkFromOrTo('to', checkDirection)].datetime
+                  )}
                 </p>
                 <p className="station-descriptions__city">
-                  {capitalizedString(routeObject.to.city.name)}
+                  {capitalizedString(routeObject[checkFromOrTo('to', checkDirection)].city.name)}
                 </p>
                 <p className="station-descriptions__name">
-                  <span>{capitalizedString(routeObject.to.railway_station_name)}</span>{' '}
+                  <span>
+                    {capitalizedString(
+                      routeObject[checkFromOrTo('to', checkDirection)].railway_station_name
+                    )}
+                  </span>{' '}
                   <span>вокзал</span>
                 </p>
               </div>
@@ -116,7 +129,7 @@ export default function TrainDetails({ direction }: { direction: 'departure' | '
             </div>
             <CounterTicketsList direction={direction} />
           </div>
-          {ticketCount.checkedCount !== 0 && (
+          {checkedCount !== 0 && (
             <div className="carriage__wrapper">
               <CarriageChecker direction={direction} />
             </div>
@@ -124,7 +137,7 @@ export default function TrainDetails({ direction }: { direction: 'departure' | '
         </div>
       );
     }
-  }, [direction, directionClass, navigator, route, ticketCount.checkedCount]);
+  }, [checkDirection, checkedCount, direction, directionClass, navigator, route]);
 
   return element;
 }

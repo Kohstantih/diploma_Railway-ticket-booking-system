@@ -3,16 +3,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from 'components/Layout/Layout';
 import Main from 'pages/Main/Main';
 import TicketPurchaseProgress from 'components/TicketPurchaseProgress/TicketPurchaseProgress';
-import Page from 'components/Page/Page';
-import AsideSearchOptions from 'components/AsideSearchOptions/AsideSearchOptions';
+import Page from 'views/Page/Page';
+import AsideSearchOptions from 'pages/AsideSearchOptions/AsideSearchOptions';
 import TrainsSearchPage from 'pages/TrainsSearchPage/TrainsSearchPage';
 import TicketsPage from 'pages/TicketsPage/TicketsPage';
-
-import AsideTripInfo from 'components/AsideTripInfo/AsideTripInfo';
-import PassengerDataList from 'components/PassengerDataList/PassengerDataList';
-import PaymentPage from 'components/PaymentPage/PaymentPage';
-import VerificationPage from 'components/VerificationPage/VerificationPage';
-import SuccessfulOrderPage from 'components/SuccessfulOrderPage/SuccessfulOrderPage';
+import AsideTripInfo from 'pages/AsideTripInfo/AsideTripInfo';
+import PassengersPage from 'pages/PassengersPage/PassengersPage';
+import PaymentPage from 'pages/PaymentPage/PaymentPage';
+import VerificationPage from 'pages/VerificationPage/VerificationPage';
+import SuccessfulOrderPage from 'pages/SuccessfulOrderPage/SuccessfulOrderPage';
 
 import './App.css';
 
@@ -45,7 +44,7 @@ function App() {
             element={
               <>
                 <TicketPurchaseProgress stage={2} />
-                <Page aside={<AsideTripInfo />} content={<PassengerDataList />} />
+                <Page aside={<AsideTripInfo />} content={<PassengersPage />} />
               </>
             }
           />

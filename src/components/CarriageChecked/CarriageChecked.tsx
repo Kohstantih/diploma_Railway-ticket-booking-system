@@ -4,8 +4,8 @@ import getCoachNumber from 'funcs/getCoachNumber';
 import { createAvailableSeatsList } from 'funcs/createAvailableSeatsList';
 import capitalizedString from 'funcs/capitalizedString';
 
-import CarriageFacilitiesList from '../CarriageFacilitiesList/CarriageFacilitiesList';
-import CarriageSeatsWidget from '../CarriageSeatsWidget/CarriageSeatsWidget';
+import CarriageFacilitiesList from 'components/CarriageFacilitiesList/CarriageFacilitiesList';
+import CarriageSeatsWidget from 'components/CarriageSeatsWidget/CarriageSeatsWidget';
 import CostWidget from 'components/CostWidget/CostWidget';
 
 import { TSeatsRequestObject } from 'types/TSeatsRequestObject';

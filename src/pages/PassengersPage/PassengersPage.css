@@ -1,0 +1,28 @@
+.passengers__item {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #00000040;
+
+  margin-bottom: 45px;
+}
+
+.passenger-add__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px;
+}
+
+.passenger-add__title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+
+  color: #292929;
+}
+
+.passengers__btn-wrapper {
+  width: 222px;
+
+  margin: 100px 0 0 auto;
+}

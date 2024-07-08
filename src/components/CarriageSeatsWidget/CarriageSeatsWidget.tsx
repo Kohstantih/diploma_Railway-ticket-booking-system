@@ -4,10 +4,10 @@ import { useAppDispatch, useAppSelector } from 'hooks/redux';
 import { addSeat, deleteSeat } from 'state/reducers/setSeatsCheckedSlice';
 import getCoachNumber from 'funcs/getCoachNumber';
 
-import CarriageEconom from '../Carriages/CarriageEconom';
-import CarriageSeat from '../Carriages/CarriageSeat';
-import CarriageCompartment from '../Carriages/CarriageCompartment';
-import CarriageLuxury from '../Carriages/CarriageLuxury';
+import CarriageEconom from 'components/Carriages/CarriageEconom';
+import CarriageSeat from 'components/Carriages/CarriageSeat';
+import CarriageCompartment from 'components/Carriages/CarriageCompartment';
+import CarriageLuxury from 'components/Carriages/CarriageLuxury';
 
 import { TSeatsDirectionObj } from 'types/TSeatsDirectionObj';
 import { TSeatsRequestObject } from 'types/TSeatsRequestObject';
@@ -25,6 +25,7 @@ export default function CarriageSeatsWidget({
   const { coach, seats } = carriageObj;
   const { class_type: type, name } = coach;
   const { [directionObj.direction]: seatsChecked } = useAppSelector((state) => state.seatsChecked);
+  const { checkedCount } = useAppSelector((state) => state.ticketsCount);
   const dispatch = useAppDispatch();
 
   const carriageImages = useMemo(
@@ -58,15 +59,26 @@ export default function CarriageSeatsWidget({
 
   const setSeat = useCallback(
     (number: number) => {
-      dispatch(
-        addSeat({
-          route: directionObj.direction,
-          id: directionObj.id,
-          seatObj: { coachId: coach._id, type, price: priceObject, seatNumber: number },
-        })
-      );
+      const countCheckedSeats = seatsChecked?.seats.length ? seatsChecked?.seats.length : 0;
+      if (countCheckedSeats < checkedCount)
+        dispatch(
+          addSeat({
+            route: directionObj.direction,
+            id: directionObj.id,
+            seatObj: { coachId: coach._id, type, price: priceObject, seatNumber: number },
+          })
+        );
     },
-    [coach._id, directionObj.direction, directionObj.id, dispatch, priceObject, type]
+    [
+      checkedCount,
+      coach._id,
+      directionObj.direction,
+      directionObj.id,
+      dispatch,
+      priceObject,
+      seatsChecked?.seats.length,
+      type,
+    ]
   );
 
   const delSeat = useCallback(
@@ -91,7 +103,7 @@ export default function CarriageSeatsWidget({
         if (o.coachId === carriageObj.coach._id && name === carriageObj.coach.class_type)
           result.push(o.seatNumber);
       });
-      
+
       return result;
     },
     [carriageObj.coach._id, carriageObj.coach.class_type, seatsChecked]

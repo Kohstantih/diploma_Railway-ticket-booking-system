@@ -1,11 +1,11 @@
 .passenger-card__list {
-    padding: 30px 0 30px 0;
+  padding: 30px 0 30px 0;
 }
 
 .passenger-card__item {
-    padding: 30px;
+  padding: 30px;
 }
 
 .passenger-card__item:nth-child(n + 2) {
-    border-top: 1px solid #E5E5E5;
+  border-top: 1px solid #e5e5e5;
 }

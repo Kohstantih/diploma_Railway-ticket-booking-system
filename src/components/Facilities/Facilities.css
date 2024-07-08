@@ -22,27 +22,27 @@
 }
 
 .facilities-icon__compartment {
-  background-image: url(../../assets/images/icon_compartment.svg);
+  background-image: url(assets/images/icon_compartment.svg);
 }
 
 .facilities-icon__econom-class {
-  background-image: url(../../assets/images/icon_econom-class.svg);
+  background-image: url(assets/images/icon_econom-class.svg);
 }
 
 .facilities-icon__seat-carriage {
-  background-image: url(../../assets/images/icon_seat-carriage.svg);
+  background-image: url(assets/images/icon_seat-carriage.svg);
 }
 
 .facilities-icon__luxury-carriage {
-  background-image: url(../../assets/images/icon_luxury-carriage.svg);
+  background-image: url(assets/images/icon_luxury-carriage.svg);
 }
 
 .facilities-icon__wi-fi {
-  background-image: url(../../assets/images/icon_wi-fi.svg);
+  background-image: url(assets/images/icon_wi-fi.svg);
 }
 
 .facilities-icon__express {
-  background-image: url(../../assets/images/icon_express.svg);
+  background-image: url(assets/images/icon_express.svg);
 }
 
 .facilities__title {

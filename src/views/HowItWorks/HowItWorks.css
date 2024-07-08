@@ -30,6 +30,8 @@
   border-radius: 5px;
 
   background-color: transparent;
+
+  cursor: pointer;
 }
 
 .manual__btn:hover {
@@ -54,13 +56,13 @@
 }
 
 .card_monitor {
-  background-image: url('../../assets/images/monitor.png');
+  background-image: url(assets/images/monitor.png);
 }
 
 .card_building {
-  background-image: url('../../assets/images/building.png');
+  background-image: url(assets/images/building.png);
 }
 
 .card_earth {
-  background-image: url('../../assets/images/earth.png');
+  background-image: url(assets/images/earth.png);
 }

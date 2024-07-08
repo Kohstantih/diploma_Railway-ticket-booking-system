@@ -1,8 +1,9 @@
 export function getTimeObject(seconds: number) {
-  const date = new Date(seconds * 1000);
+  const hours = Math.floor(seconds / 3600);
+  const minute = Math.floor((seconds - hours * 3600) / 60);
 
   return {
-    hours: date.getHours(),
-    minute: date.getMinutes(),
+    hours,
+    minute,
   };
 }

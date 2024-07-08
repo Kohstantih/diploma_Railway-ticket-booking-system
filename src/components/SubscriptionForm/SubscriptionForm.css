@@ -50,6 +50,8 @@
   color: rgba(229, 229, 229, 1);
 
   margin-left: 33px;
+
+  cursor: pointer;
 }
 
 .subscription__btn:hover {
@@ -68,10 +70,11 @@
   width: 300px;
 
   border-radius: 5px;
-  background-color: #FFCA62;
+  background-color: #ffca62;
 
   position: absolute;
-  top: 120px; left: 75px;
+  top: 120px;
+  left: 75px;
 
   white-space: pre-wrap;
 
@@ -86,11 +89,11 @@
   top: -18px;
 
   border: 10px solid transparent;
-  border-bottom: 10px solid #FFCA62;
+  border-bottom: 10px solid #ffca62;
 }
 
 .subscription-form__info::after {
-  border-bottom: 10px solid #FFCA62;
+  border-bottom: 10px solid #ffca62;
 
   top: -18px;
 }

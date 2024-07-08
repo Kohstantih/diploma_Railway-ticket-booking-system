@@ -29,17 +29,15 @@ export default function TrainCarriagesSeatsList({
 
   const minPriceFirst = useCallback(() => {
     let min = 0;
+    const departure = departureObj.price_info.first?.price;
+    const arrival = arrivalObj?.price_info.first?.price;
 
-    if (departureObj.price_info.first && !arrivalObj?.price_info.first) {
-      min = departureObj.price_info.first.price;
-    } else if (departureObj.price_info.first && arrivalObj?.price_info.first) {
-      Math.min(departureObj.price_info.first.price, arrivalObj.price_info.first.price);
-    } else if (arrivalObj?.price_info.first) {
-      min = arrivalObj.price_info.first.price;
-    }
+    if (departure && arrival) min = Math.min(departure, arrival);
+    else if (departure) min = departure;
+    else if (arrival) min = arrival;
 
     return min;
-  }, [arrivalObj, departureObj.price_info.first]);
+  }, [arrivalObj?.price_info.first?.price, departureObj.price_info.first?.price]);
 
   const minPriceSecond = useCallback(() => {
     let min = 0;
@@ -97,20 +95,15 @@ export default function TrainCarriagesSeatsList({
 
   const minPriceFourth = useCallback(() => {
     let min = 0;
+    const departure = departureObj.price_info.fourth?.bottom_price;
+    const arrival = arrivalObj?.price_info.fourth?.bottom_price;
 
-    if (departureObj.price_info.fourth && !arrivalObj) {
-      min = departureObj.price_info.fourth.bottom_price;
-    } else if (departureObj.price_info.fourth && arrivalObj && arrivalObj.price_info.fourth) {
-      min = Math.min(
-        departureObj.price_info.fourth.bottom_price,
-        arrivalObj.price_info.fourth.bottom_price
-      );
-    } else if (arrivalObj) {
-      min = arrivalObj.price_info.fourth.bottom_price;
-    }
+    if (departure && arrival) min = Math.min(departure, arrival);
+    else if (departure) min = departure;
+    else if (arrival) min = arrival;
 
     return min;
-  }, [arrivalObj, departureObj.price_info.fourth]);
+  }, [arrivalObj?.price_info.fourth?.bottom_price, departureObj.price_info.fourth?.bottom_price]);
 
   useEffect(() => {
     const result: JSX.Element[] = [];

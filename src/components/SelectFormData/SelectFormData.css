@@ -11,7 +11,7 @@
   border: 1px solid #928f94;
 
   appearance: none;
-  background-image: url(../../assets/images/icon_select.svg);
+  background-image: url(assets/images/icon_select.svg);
   background-position: 95%;
   background-repeat: no-repeat;
 
@@ -27,7 +27,6 @@
 
 .data-select__options-list {
   border-radius: 5px;
-  background-color: #f4f3f6;
 
   box-shadow: 0px 2px 2px 0px #00000033;
 
@@ -38,6 +37,8 @@
   top: 0;
   left: 0;
   right: 0;
+
+  animation: popover 0.3s linear;
 }
 
 .data-select__option {
@@ -47,6 +48,8 @@
   text-align: left;
 
   color: #292929;
+
+  background-color: #f4f3f6;
 
   padding: 10px;
 }

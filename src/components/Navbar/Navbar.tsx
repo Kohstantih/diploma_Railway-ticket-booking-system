@@ -1,26 +1,30 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
 export default function Navbar() {
-  const navList = [
-    {
-      name: 'О нас',
-      link: 'about',
-    },
-    {
-      name: 'Как это работает',
-      link: 'manual',
-    },
-    {
-      name: 'Отзывы',
-      link: 'reviews',
-    },
-    {
-      name: 'Контакты',
-      link: 'footer',
-    },
-  ];
+  const navList = useMemo(
+    () => [
+      {
+        name: 'О нас',
+        link: 'about',
+      },
+      {
+        name: 'Как это работает',
+        link: 'manual',
+      },
+      {
+        name: 'Отзывы',
+        link: 'reviews',
+      },
+      {
+        name: 'Контакты',
+        link: 'footer',
+      },
+    ],
+    []
+  );
 
   return (
     <nav className="navigation__list logo">
