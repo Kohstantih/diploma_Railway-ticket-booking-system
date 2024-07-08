@@ -25,7 +25,7 @@ export default function VerificationPage() {
   const { passengers } = useAppSelector((state) => state.passengers);
   const { childrenWithoutSeatCount } = useAppSelector((state) => state.ticketsCount);
 
-  const [send, { data, isLoading, isError }] = useSendOrderMutation();
+  const [send, { data }] = useSendOrderMutation();
 
   const createDirectionArgs = useCallback(
     (direction: 'departure' | 'arrival') => {
