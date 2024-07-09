@@ -17,7 +17,11 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      basename={
+        process.env.NODE_ENV === 'production' ? '/diploma_railway-ticket-booking-system/' : '/'
+      }
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
