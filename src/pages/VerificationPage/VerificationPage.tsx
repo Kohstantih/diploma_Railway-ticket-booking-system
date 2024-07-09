@@ -29,7 +29,7 @@ export default function VerificationPage() {
 
   const createDirectionArgs = useCallback(
     (direction: 'departure' | 'arrival') => {
-      if (!route && !route![direction]) return undefined;
+      if (!route || !route![direction]) return undefined;
 
       const objectSeats = direction === 'departure' ? departureSeats : arrivalSeats;
 
